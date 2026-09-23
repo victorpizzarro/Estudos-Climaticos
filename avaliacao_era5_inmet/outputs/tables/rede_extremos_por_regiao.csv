@@ -1,0 +1,646 @@
+codigo,estacao,uf,regiao,anos_validos_extremos,primeiro_ano_valido_extremos,ultimo_ano_valido_extremos,maior_sequencia_consecutiva,rede_extremos_10a,rede_extremos_15a,rede_extremos_consecutiva_10a,rede_extremos_consecutiva_15a
+A001,BRASILIA,DF,Centro-Oeste,20,2003.0,2025.0,15,True,True,True,True
+A002,GOIANIA,GO,Centro-Oeste,18,2006.0,2024.0,15,True,True,True,True
+A003,MORRINHOS,GO,Centro-Oeste,16,2006.0,2025.0,7,True,True,False,False
+A005,PORANGATU,GO,Centro-Oeste,0,,,0,False,False,False,False
+A009,PALMAS,TO,Norte,6,2008.0,2020.0,3,False,False,False,False
+A010,PARANA,TO,Norte,11,2007.0,2024.0,5,True,False,False,False
+A011,SAO SIMAO,GO,Centro-Oeste,11,2007.0,2025.0,3,True,False,False,False
+A012,LUZIANIA,GO,Centro-Oeste,15,2007.0,2025.0,7,True,True,False,False
+A013,ARAGARCAS,GO,Centro-Oeste,6,2008.0,2019.0,3,False,False,False,False
+A014,GOIAS,GO,Centro-Oeste,12,2008.0,2025.0,4,True,False,False,False
+A015,ITAPACI,GO,Centro-Oeste,8,2011.0,2021.0,3,False,False,False,False
+A016,JATAI,GO,Centro-Oeste,14,2008.0,2025.0,9,True,False,False,False
+A017,POSSE,GO,Centro-Oeste,9,2008.0,2025.0,3,False,False,False,False
+A018,PEIXE,TO,Norte,6,2007.0,2022.0,2,False,False,False,False
+A019,GURUPI,TO,Norte,11,2008.0,2024.0,5,True,False,False,False
+A020,PEDRO AFONSO,TO,Norte,9,2008.0,2024.0,2,False,False,False,False
+A021,ARAGUAINA,TO,Norte,9,2009.0,2025.0,4,False,False,False,False
+A022,GOIANESIA,GO,Centro-Oeste,9,2009.0,2025.0,2,False,False,False,False
+A023,CAIAPONIA,GO,Centro-Oeste,11,2008.0,2025.0,4,True,False,False,False
+A024,ALTO PARAISO DE GOIAS,GO,Centro-Oeste,11,2008.0,2021.0,5,True,False,False,False
+A025,RIO VERDE,GO,Centro-Oeste,8,2008.0,2025.0,2,False,False,False,False
+A026,MINEIROS,GO,Centro-Oeste,7,2011.0,2023.0,2,False,False,False,False
+A027,PARAUNA,GO,Centro-Oeste,10,2009.0,2025.0,4,True,False,False,False
+A028,IPORA,GO,Centro-Oeste,7,2014.0,2025.0,2,False,False,False,False
+A029,EDEIA,GO,Centro-Oeste,4,2018.0,2024.0,3,False,False,False,False
+A031,SAO MIGUEL DO ARAGUAIA,GO,Centro-Oeste,3,2018.0,2025.0,1,False,False,False,False
+A032,MONTE ALEGRE DE GOIAS,GO,Centro-Oeste,9,2008.0,2022.0,3,False,False,False,False
+A033,PIRES DO RIO,GO,Centro-Oeste,13,2008.0,2025.0,4,True,False,False,False
+A034,CATALAO,GO,Centro-Oeste,14,2009.0,2025.0,7,True,False,False,False
+A035,ITUMBIARA,GO,Centro-Oeste,11,2009.0,2025.0,3,True,False,False,False
+A036,CRISTALINA,GO,Centro-Oeste,18,2008.0,2025.0,18,True,True,True,True
+A037,SILVANIA,GO,Centro-Oeste,11,2011.0,2025.0,5,True,False,False,False
+A038,DIANOPOLIS,TO,Norte,9,2009.0,2023.0,4,False,False,False,False
+A039,FORMOSO DO ARAGUAIA,TO,Norte,0,,,0,False,False,False,False
+A040,MATEIROS,TO,Norte,7,2014.0,2025.0,3,False,False,False,False
+A041,MARIANOPOLIS DO TO,TO,Norte,4,2013.0,2025.0,2,False,False,False,False
+A042,BRAZLANDIA,DF,Centro-Oeste,7,2018.0,2025.0,6,False,False,False,False
+A043,CAMPOS LINDOS,TO,Norte,4,2014.0,2019.0,2,False,False,False,False
+A044,ARAGUATINS,TO,Norte,7,2011.0,2025.0,5,False,False,False,False
+A045,AGUAS EMENDADAS,DF,Centro-Oeste,17,2009.0,2025.0,17,True,True,True,True
+A046,GAMA (PONTE ALTA),DF,Centro-Oeste,11,2015.0,2025.0,11,True,False,True,False
+A047,PARANOA (COOPA-DF),DF,Centro-Oeste,7,2018.0,2025.0,4,False,False,False,False
+A048,SANTA FE DO ARAGUAIA,TO,Norte,4,2018.0,2025.0,3,False,False,False,False
+A049,COLINAS DO TOCANTINS,TO,Norte,2,2017.0,2020.0,1,False,False,False,False
+A050,RIO SONO,TO,Norte,0,,,0,False,False,False,False
+A051,PIUM,TO,Norte,4,2018.0,2023.0,2,False,False,False,False
+A052,SANTA ROSA DO TOCANTINS,TO,Norte,0,,,0,False,False,False,False
+A053,ALMAS,TO,Norte,4,2018.0,2025.0,2,False,False,False,False
+A054,ARAGUACU,TO,Norte,3,2016.0,2025.0,1,False,False,False,False
+A055,LAGOA DA CONFUSAO,TO,Norte,5,2017.0,2025.0,3,False,False,False,False
+A056,CRISTALINA (FAZENDA SANTA MONICA),GO,Centro-Oeste,5,2019.0,2025.0,2,False,False,False,False
+A101,MANAUS,AM,Norte,16,2007.0,2025.0,15,True,True,True,True
+A102,PARQUE ESTADUAL CHANDLESS,AC,Norte,5,2015.0,2022.0,3,False,False,False,False
+A104,RIO BRANCO,AC,Norte,0,,,0,False,False,False,False
+A108,CRUZEIRO DO SUL,AC,Norte,0,,,0,False,False,False,False
+A109,EIRUNEPE,AM,Norte,1,2015.0,2015.0,1,False,False,False,False
+A110,BOCA DO ACRE,AM,Norte,8,2012.0,2025.0,3,False,False,False,False
+A111,LABREA,AM,Norte,0,,,0,False,False,False,False
+A112,HUMAITA,AM,Norte,0,,,0,False,False,False,False
+A113,APUI,AM,Norte,5,2011.0,2015.0,5,False,False,False,False
+A117,COARI,AM,Norte,5,2011.0,2019.0,2,False,False,False,False
+A119,MANACAPURU,AM,Norte,12,2009.0,2025.0,5,True,False,False,False
+A120,AUTAZES,AM,Norte,0,,,0,False,False,False,False
+A121,ITACOATIARA,AM,Norte,10,2009.0,2025.0,3,True,False,False,False
+A122,MAUES,AM,Norte,6,2009.0,2014.0,6,False,False,False,False
+A123,PARINTINS,AM,Norte,4,2009.0,2024.0,2,False,False,False,False
+A124,URUCARA,AM,Norte,0,,,0,False,False,False,False
+A125,RIO URUBU,AM,Norte,0,,,0,False,False,False,False
+A126,PRESIDENTE FIGUEIREDO,AM,Norte,8,2009.0,2018.0,4,False,False,False,False
+A128,BARCELOS,AM,Norte,9,2009.0,2025.0,4,False,False,False,False
+A133,MANICORE,AM,Norte,7,2012.0,2024.0,4,False,False,False,False
+A134,S. G. DA CACHOEIRA,AM,Norte,9,2012.0,2024.0,4,False,False,False,False
+A135,BOA VISTA,RR,Norte,5,2011.0,2019.0,3,False,False,False,False
+A136,PORTO WALTER,AC,Norte,2,2015.0,2018.0,1,False,False,False,False
+A137,MARECHAL THAUMATURGO,AC,Norte,1,2015.0,2015.0,1,False,False,False,False
+A138,FEIJO,AC,Norte,0,,,0,False,False,False,False
+A140,EPITACIOLANDIA,AC,Norte,9,2010.0,2025.0,4,False,False,False,False
+A144,NOVO ARIPUANA,AM,Norte,1,2025.0,2025.0,1,False,False,False,False
+A201,BELEM,PA,Norte,10,2010.0,2024.0,4,True,False,False,False
+A202,CASTANHAL,PA,Norte,11,2004.0,2025.0,5,True,False,False,False
+A203,SAO LUIS,MA,Nordeste,10,2012.0,2025.0,6,True,False,False,False
+A204,BALSAS,MA,Nordeste,4,2008.0,2019.0,2,False,False,False,False
+A205,CAROLINA,MA,Nordeste,9,2012.0,2025.0,6,False,False,False,False
+A206,CHAPADINHA,MA,Nordeste,10,2009.0,2025.0,5,True,False,False,False
+A207,GRAJAU,MA,Nordeste,7,2009.0,2024.0,2,False,False,False,False
+A209,MEDICILANDIA,PA,Norte,8,2009.0,2023.0,6,False,False,False,False
+A210,PACAJA,PA,Norte,1,2025.0,2025.0,1,False,False,False,False
+A211,PLACAS,PA,Norte,6,2009.0,2023.0,2,False,False,False,False
+A212,PARAGOMINAS,PA,Norte,0,,,0,False,False,False,False
+A213,TOME ACU,PA,Norte,7,2008.0,2025.0,2,False,False,False,False
+A214,RONDON DO PARA,PA,Norte,8,2009.0,2024.0,4,False,False,False,False
+A215,SALINOPOLIS,PA,Norte,4,2009.0,2016.0,2,False,False,False,False
+A216,SAO FELIX DO XINGU,PA,Norte,2,2017.0,2021.0,1,False,False,False,False
+A217,FAROL de SANTANA,MA,Nordeste,5,2009.0,2018.0,2,False,False,False,False
+A218,PREGUICAS,MA,Nordeste,7,2009.0,2024.0,2,False,False,False,False
+A219,TURIACU,MA,Nordeste,9,2009.0,2025.0,3,False,False,False,False
+A220,BACABAL,MA,Nordeste,7,2009.0,2025.0,3,False,False,False,False
+A221,BARRA DO CORDA,MA,Nordeste,7,2009.0,2018.0,3,False,False,False,False
+A222,COLINAS,MA,Nordeste,6,2009.0,2023.0,2,False,False,False,False
+A223,ALTO PARNAIBA,MA,Nordeste,8,2009.0,2024.0,4,False,False,False,False
+A224,ESTREITO,MA,Nordeste,9,2009.0,2025.0,3,False,False,False,False
+A225,IMPERATRIZ,MA,Nordeste,12,2009.0,2023.0,5,True,False,False,False
+A226,BRAGANCA,PA,Norte,10,2009.0,2024.0,3,True,False,False,False
+A227,SOURE,PA,Norte,0,,,0,False,False,False,False
+A228,BREVES,PA,Norte,2,2018.0,2019.0,2,False,False,False,False
+A229,TUCURUI,PA,Norte,10,2009.0,2024.0,3,True,False,False,False
+A230,SERRA DOS CARAJAS,PA,Norte,6,2009.0,2018.0,4,False,False,False,False
+A231,ITAITUBA,PA,Norte,8,2009.0,2025.0,3,False,False,False,False
+A232,OBIDOS,PA,Norte,0,,,0,False,False,False,False
+A233,SANTANA DO ARAGUAIA,PA,Norte,7,2009.0,2024.0,2,False,False,False,False
+A234,TUCUMA,PA,Norte,5,2017.0,2025.0,3,False,False,False,False
+A235,NOVO REPARTIMENTO,PA,Norte,8,2009.0,2020.0,4,False,False,False,False
+A236,CAMETA,PA,Norte,2,2013.0,2019.0,1,False,False,False,False
+A237,CAXIAS,MA,Nordeste,7,2009.0,2024.0,2,False,False,False,False
+A238,BURITICUPU,MA,Nordeste,10,2009.0,2025.0,9,True,False,False,False
+A239,MONTE ALEGRE,PA,Norte,2,2013.0,2016.0,1,False,False,False,False
+A240,MARABA,PA,Norte,0,,,0,False,False,False,False
+A241,CONCEICAO DO ARAGUAIA,PA,Norte,0,,,0,False,False,False,False
+A242,OIAPOQUE,AP,Norte,6,2009.0,2025.0,2,False,False,False,False
+A244,PORTO GRANDE,AP,Norte,2,2023.0,2024.0,2,False,False,False,False
+A245,PORTO DE MOZ,PA,Norte,2,2023.0,2024.0,2,False,False,False,False
+A246,MINA DO PALITO,PA,Norte,4,2012.0,2016.0,3,False,False,False,False
+A247,XINGUARA,PA,Norte,4,2017.0,2024.0,1,False,False,False,False
+A248,CAPITAO POCO,PA,Norte,4,2012.0,2019.0,2,False,False,False,False
+A249,MACAPA,AP,Norte,5,2014.0,2025.0,3,False,False,False,False
+A250,SANTAREM,PA,Norte,4,2016.0,2024.0,2,False,False,False,False
+A251,ITAUBAL,AP,Norte,0,,,0,False,False,False,False
+A252,DOM ELISEU,PA,Norte,5,2019.0,2025.0,3,False,False,False,False
+A253,ALTAMIRA,PA,Norte,3,2019.0,2024.0,2,False,False,False,False
+A254,REDENCAO,PA,Norte,4,2020.0,2025.0,2,False,False,False,False
+A255,ZE DOCA,MA,Nordeste,4,2020.0,2025.0,3,False,False,False,False
+A256,SANTA MARIA DAS BARREIRAS,PA,Norte,1,2024.0,2024.0,1,False,False,False,False
+A301,RECIFE,PE,Nordeste,9,2005.0,2020.0,6,False,False,False,False
+A303,MACEIO,AL,Nordeste,15,2004.0,2025.0,7,True,True,False,False
+A304,NATAL,RN,Nordeste,0,,,0,False,False,False,False
+A305,FORTALEZA,CE,Nordeste,8,2013.0,2023.0,3,False,False,False,False
+A306,SOBRAL,CE,Nordeste,5,2013.0,2020.0,4,False,False,False,False
+A307,PETROLINA,PE,Nordeste,14,2004.0,2021.0,7,True,False,False,False
+A308,PARNAIBA,PI,Nordeste,6,2010.0,2023.0,3,False,False,False,False
+A309,ARCO VERDE,PE,Nordeste,10,2005.0,2025.0,5,True,False,False,False
+A310,AREIA,PB,Nordeste,15,2005.0,2024.0,6,True,True,False,False
+A311,FLORIANO,PI,Nordeste,9,2007.0,2019.0,5,False,False,False,False
+A312,TERESINA,PI,Nordeste,5,2015.0,2023.0,4,False,False,False,False
+A313,CAMPINA GRANDE,PB,Nordeste,11,2008.0,2022.0,3,True,False,False,False
+A314,GUARAMIRANGA,CE,Nordeste,0,,,0,False,False,False,False
+A315,BARBALHA,CE,Nordeste,6,2008.0,2020.0,2,False,False,False,False
+A316,CAICO,RN,Nordeste,9,2007.0,2025.0,3,False,False,False,False
+A317,MACAU,RN,Nordeste,5,2007.0,2023.0,3,False,False,False,False
+A318,MOSSORO,RN,Nordeste,7,2008.0,2025.0,3,False,False,False,False
+A319,IGUATU,CE,Nordeste,2,2008.0,2014.0,1,False,False,False,False
+A320,JOAO PESSOA,PB,Nordeste,6,2008.0,2024.0,3,False,False,False,False
+A321,PATOS,PB,Nordeste,7,2008.0,2020.0,2,False,False,False,False
+A322,GARANHUNS,PE,Nordeste,12,2008.0,2025.0,6,True,False,False,False
+A323,PAO DE ACUCAR,AL,Nordeste,6,2008.0,2024.0,2,False,False,False,False
+A324,TAUA,CE,Nordeste,7,2008.0,2017.0,4,False,False,False,False
+A325,QUIXERAMOBIM,CE,Nordeste,5,2008.0,2017.0,2,False,False,False,False
+A326,BOM JESUS DO PIAUI,PI,Nordeste,9,2008.0,2023.0,4,False,False,False,False
+A327,PALMEIRA DOS INDIOS,AL,Nordeste,9,2008.0,2020.0,3,False,False,False,False
+A328,SURUBIM,PE,Nordeste,7,2009.0,2019.0,4,False,False,False,False
+A329,CABROBO,PE,Nordeste,12,2008.0,2025.0,5,True,False,False,False
+A330,PAULISTANA,PI,Nordeste,0,,,0,False,False,False,False
+A331,SAO JOAO DO PIAUI,PI,Nordeste,6,2008.0,2016.0,3,False,False,False,False
+A332,MORADA NOVA,CE,Nordeste,0,,,0,False,False,False,False
+A333,SAO GONCALO,PB,Nordeste,0,,,0,False,False,False,False
+A334,MONTEIRO,PB,Nordeste,9,2008.0,2023.0,3,False,False,False,False
+A335,PIRIPIRI,PI,Nordeste,8,2009.0,2024.0,2,False,False,False,False
+A336,ALVORADA DO GURGUEIA,PI,Nordeste,0,,,0,False,False,False,False
+A337,CARACOL,PI,Nordeste,3,2010.0,2018.0,1,False,False,False,False
+A338,ESPERANTINA,PI,Nordeste,4,2008.0,2015.0,3,False,False,False,False
+A339,JAGUARUANA,CE,Nordeste,0,,,0,False,False,False,False
+A340,APODI,RN,Nordeste,7,2008.0,2023.0,2,False,False,False,False
+A341,CARUARU,PE,Nordeste,0,,,0,False,False,False,False
+A342,CRATEUS,CE,Nordeste,11,2011.0,2024.0,5,True,False,False,False
+A343,PICOS,PI,Nordeste,5,2010.0,2019.0,2,False,False,False,False
+A344,CALCANHAR,RN,Nordeste,2,2011.0,2015.0,1,False,False,False,False
+A345,SAO RAIMUNDO NONATO,PI,Nordeste,7,2009.0,2018.0,3,False,False,False,False
+A346,URUCUI,PI,Nordeste,11,2009.0,2024.0,4,True,False,False,False
+A347,CAMPOS SALES,CE,Nordeste,6,2009.0,2018.0,3,False,False,False,False
+A348,CABACEIRAS,PB,Nordeste,11,2009.0,2023.0,4,True,False,False,False
+A349,IBIMIRIM,PE,Nordeste,13,2009.0,2025.0,8,True,False,False,False
+A350,SERRA TALHADA,PE,Nordeste,8,2009.0,2020.0,4,False,False,False,False
+A351,FLORESTA,PE,Nordeste,9,2009.0,2024.0,3,False,False,False,False
+A352,CAMARATUBA,PB,Nordeste,6,2009.0,2023.0,3,False,False,False,False
+A353,ARAPIRACA,AL,Nordeste,8,2009.0,2017.0,7,False,False,False,False
+A354,OEIRAS,PI,Nordeste,8,2009.0,2024.0,2,False,False,False,False
+A355,CORURIPE,AL,Nordeste,9,2009.0,2025.0,4,False,False,False,False
+A356,SAO LUIS DO QUITUNDE,AL,Nordeste,7,2009.0,2019.0,2,False,False,False,False
+A357,PALMARES,PE,Nordeste,10,2009.0,2025.0,6,True,False,False,False
+A358,JAGUARIBE,CE,Nordeste,10,2009.0,2023.0,4,True,False,False,False
+A359,ITAPIPOCA,CE,Nordeste,6,2009.0,2023.0,2,False,False,False,False
+A360,ACARAU,CE,Nordeste,7,2010.0,2018.0,4,False,False,False,False
+A361,CASTELO DO PIAUI,PI,Nordeste,7,2010.0,2024.0,3,False,False,False,False
+A362,SAO PEDRO DO PIAUI,PI,Nordeste,5,2011.0,2018.0,2,False,False,False,False
+A363,VALENCA DO PIAUI,PI,Nordeste,10,2010.0,2025.0,6,True,False,False,False
+A364,GILBUES,PI,Nordeste,7,2010.0,2024.0,3,False,False,False,False
+A365,CANTO DO BURITI,PI,Nordeste,0,,,0,False,False,False,False
+A366,OURICURI,PE,Nordeste,4,2011.0,2025.0,2,False,False,False,False
+A367,SANTA CRUZ,RN,Nordeste,4,2012.0,2017.0,2,False,False,False,False
+A368,TIANGUA,CE,Nordeste,3,2019.0,2023.0,2,False,False,False,False
+A369,QUIXADA,CE,Nordeste,1,2023.0,2023.0,1,False,False,False,False
+A370,SALGUEIRO,PE,Nordeste,4,2018.0,2025.0,3,False,False,False,False
+A371,PIRANHAS,AL,Nordeste,4,2018.0,2025.0,2,False,False,False,False
+A372,IPANGUACU,RN,Nordeste,1,2018.0,2018.0,1,False,False,False,False
+A373,ITAPORANGA,PB,Nordeste,1,2018.0,2018.0,1,False,False,False,False
+A374,CORRENTE,PI,Nordeste,5,2019.0,2025.0,4,False,False,False,False
+A375,BAIXA GRANDE DO RIBEIRO,PI,Nordeste,3,2020.0,2025.0,2,False,False,False,False
+A376,CAMPO MAIOR,PI,Nordeste,0,,,0,False,False,False,False
+A377,ANGICAL DO PIAUI,PI,Nordeste,1,2020.0,2020.0,1,False,False,False,False
+A401,SALVADOR,BA,Nordeste,15,2004.0,2025.0,9,True,True,False,False
+A402,BARREIRAS,BA,Nordeste,12,2007.0,2024.0,4,True,False,False,False
+A404,LUIZ EDUARDO MAGALHAES,BA,Nordeste,11,2007.0,2024.0,4,True,False,False,False
+A405,CARAVELAS,BA,Nordeste,8,2004.0,2025.0,2,False,False,False,False
+A406,CRUZ DAS ALMAS,BA,Nordeste,0,,,0,False,False,False,False
+A407,ITIRUCU,BA,Nordeste,12,2004.0,2022.0,5,True,False,False,False
+A408,ITABERABA,BA,Nordeste,16,2004.0,2025.0,12,True,True,True,False
+A409,ARACAJU,SE,Nordeste,11,2004.0,2020.0,10,True,False,True,False
+A410,ILHEUS,BA,Nordeste,7,2004.0,2024.0,3,False,False,False,False
+A412,MACAJUBA,BA,Nordeste,0,,,0,False,False,False,False
+A413,FEIRA DE SANTANA,BA,Nordeste,8,2008.0,2022.0,4,False,False,False,False
+A414,VITORIA DA CONQUISTA,BA,Nordeste,13,2008.0,2025.0,6,True,False,False,False
+A415,SANTA RITA DE CASSIA,BA,Nordeste,6,2008.0,2018.0,2,False,False,False,False
+A416,CORRENTINA,BA,Nordeste,10,2010.0,2025.0,3,True,False,False,False
+A417,ITABAIANINHA,SE,Nordeste,10,2008.0,2025.0,3,True,False,False,False
+A418,BOM JESUS DA LAPA,BA,Nordeste,0,,,0,False,False,False,False
+A419,POCO VERDE,SE,Nordeste,7,2009.0,2021.0,2,False,False,False,False
+A420,CARIRA,SE,Nordeste,7,2009.0,2020.0,3,False,False,False,False
+A421,BREJO GRANDE,SE,Nordeste,8,2009.0,2025.0,3,False,False,False,False
+A422,ABROLHOS,BA,Nordeste,2,2015.0,2019.0,1,False,False,False,False
+A423,REMANSO,BA,Nordeste,9,2009.0,2023.0,2,False,False,False,False
+A424,IRECE,BA,Nordeste,11,2009.0,2025.0,5,True,False,False,False
+A425,LENCOIS,BA,Nordeste,10,2009.0,2023.0,3,True,False,False,False
+A426,GUANAMBI,BA,Nordeste,10,2009.0,2025.0,4,True,False,False,False
+A427,PORTO SEGURO,BA,Nordeste,6,2009.0,2018.0,3,False,False,False,False
+A428,SENHOR DO BONFIM,BA,Nordeste,9,2009.0,2023.0,3,False,False,False,False
+A429,BARRA,BA,Nordeste,8,2009.0,2025.0,3,False,False,False,False
+A430,PIATA,BA,Nordeste,14,2009.0,2023.0,12,True,False,True,False
+A431,CONDE,BA,Nordeste,0,,,0,False,False,False,False
+A432,BURITIRAMA,BA,Nordeste,4,2012.0,2015.0,4,False,False,False,False
+A433,BRUMADO,BA,Nordeste,14,2009.0,2024.0,7,True,False,False,False
+A434,AMARGOSA,BA,Nordeste,13,2009.0,2025.0,5,True,False,False,False
+A435,UAUA,BA,Nordeste,7,2009.0,2018.0,2,False,False,False,False
+A436,QUEIMADAS,BA,Nordeste,9,2009.0,2023.0,3,False,False,False,False
+A437,UNA,BA,Nordeste,10,2009.0,2024.0,4,True,False,False,False
+A438,MARAU,BA,Nordeste,7,2009.0,2020.0,3,False,False,False,False
+A439,IBOTIRAMA,BA,Nordeste,9,2009.0,2025.0,2,False,False,False,False
+A440,JACOBINA,BA,Nordeste,8,2009.0,2019.0,4,False,False,False,False
+A441,SERRINHA,BA,Nordeste,10,2009.0,2019.0,8,True,False,False,False
+A442,EUCLIDES DA CUNHA,BA,Nordeste,10,2009.0,2025.0,4,True,False,False,False
+A443,DELFINO,BA,Nordeste,9,2009.0,2025.0,4,False,False,False,False
+A444,VALENCA,BA,Nordeste,4,2014.0,2023.0,1,False,False,False,False
+A445,IPIAU,BA,Nordeste,8,2010.0,2019.0,5,False,False,False,False
+A446,ITAPETINGA,BA,Nordeste,7,2010.0,2020.0,3,False,False,False,False
+A447,BELMONTE,BA,Nordeste,9,2010.0,2025.0,3,False,False,False,False
+A448,CURACA,BA,Nordeste,4,2016.0,2020.0,3,False,False,False,False
+A449,PILAO ARCADO,BA,Nordeste,0,,,0,False,False,False,False
+A450,JEREMOABO,BA,Nordeste,6,2016.0,2024.0,4,False,False,False,False
+A451,ITABAIANA,SE,Nordeste,2,2018.0,2019.0,2,False,False,False,False
+A452,FORMOSO DO RIO PRETO,BA,Nordeste,2,2018.0,2019.0,2,False,False,False,False
+A453,NOSSA SENHORA DA GLORIA,SE,Nordeste,3,2018.0,2024.0,1,False,False,False,False
+A454,MACAUBAS,BA,Nordeste,1,2018.0,2018.0,1,False,False,False,False
+A455,ITAMARAJU,BA,Nordeste,0,,,0,False,False,False,False
+A456,SALVADOR (RADIO FAROL),BA,Nordeste,4,2019.0,2025.0,2,False,False,False,False
+A458,RIBEIRA DO AMPARO,BA,Nordeste,6,2019.0,2025.0,5,False,False,False,False
+A502,BARBACENA,MG,Sudeste,15,2009.0,2025.0,10,True,True,True,False
+A505,ARAXA,MG,Sudeste,17,2003.0,2024.0,8,True,True,False,False
+A506,MONTES CLAROS,MG,Sudeste,16,2004.0,2025.0,10,True,True,True,False
+A507,UBERLANDIA,MG,Sudeste,18,2007.0,2025.0,17,True,True,True,True
+A508,ALMENARA,MG,Sudeste,13,2004.0,2025.0,5,True,False,False,False
+A509,MONTE VERDE,MG,Sudeste,18,2007.0,2025.0,10,True,True,True,False
+A510,VICOSA,MG,Sudeste,16,2008.0,2025.0,11,True,True,True,False
+A511,TIMOTEO,MG,Sudeste,11,2007.0,2025.0,5,True,False,False,False
+A512,ITUIUTABA,MG,Sudeste,12,2008.0,2025.0,4,True,False,False,False
+A513,OURO BRANCO,MG,Sudeste,15,2007.0,2025.0,12,True,True,True,False
+A514,SAO JOAO DEL REI,MG,Sudeste,0,,,0,False,False,False,False
+A515,VARGINHA,MG,Sudeste,14,2007.0,2024.0,9,True,False,False,False
+A516,PASSOS,MG,Sudeste,14,2007.0,2025.0,5,True,False,False,False
+A517,MURIAE,MG,Sudeste,11,2007.0,2023.0,4,True,False,False,False
+A518,JUIZ DE FORA,MG,Sudeste,13,2008.0,2024.0,7,True,False,False,False
+A519,CAMPINA VERDE,MG,Sudeste,12,2007.0,2025.0,3,True,False,False,False
+A520,CONCEICAO DAS ALAGOAS,MG,Sudeste,14,2008.0,2025.0,6,True,False,False,False
+A521,PAMPULHA,MG,Sudeste,18,2007.0,2025.0,17,True,True,True,True
+A522,SERRA DOS AIMORES,MG,Sudeste,12,2007.0,2025.0,4,True,False,False,False
+A523,PATROCINIO,MG,Sudeste,12,2008.0,2023.0,8,True,False,False,False
+A524,FORMIGA,MG,Sudeste,13,2007.0,2025.0,8,True,False,False,False
+A525,SACRAMENTO,MG,Sudeste,15,2007.0,2025.0,7,True,True,False,False
+A526,MONTALVANIA,MG,Sudeste,0,,,0,False,False,False,False
+A527,TEOFILO OTONI,MG,Sudeste,10,2007.0,2023.0,4,True,False,False,False
+A528,TRES MARIAS,MG,Sudeste,15,2007.0,2025.0,6,True,True,False,False
+A529,PASSA QUATRO,MG,Sudeste,11,2009.0,2023.0,7,True,False,False,False
+A530,CALDAS,MG,Sudeste,15,2007.0,2024.0,7,True,True,False,False
+A531,MARIA DA FE,MG,Sudeste,18,2008.0,2025.0,18,True,True,True,True
+A532,GOVERNADOR VALADARES,MG,Sudeste,11,2008.0,2025.0,5,True,False,False,False
+A533,GUANHAES,MG,Sudeste,16,2008.0,2024.0,11,True,True,True,False
+A534,AIMORES,MG,Sudeste,10,2008.0,2024.0,5,True,False,False,False
+A535,FLORESTAL,MG,Sudeste,14,2009.0,2025.0,9,True,False,False,False
+A536,DORES DO INDAIA,MG,Sudeste,12,2008.0,2025.0,3,True,False,False,False
+A537,DIAMANTINA,MG,Sudeste,14,2008.0,2025.0,6,True,False,False,False
+A538,CURVELO,MG,Sudeste,15,2007.0,2025.0,5,True,True,False,False
+A539,MOCAMBINHO,MG,Sudeste,15,2008.0,2025.0,10,True,True,True,False
+A540,MANTENA,MG,Sudeste,14,2008.0,2025.0,6,True,False,False,False
+A541,CAPELINHA,MG,Sudeste,13,2008.0,2025.0,8,True,False,False,False
+A542,UNAI,MG,Sudeste,12,2008.0,2025.0,4,True,False,False,False
+A543,ESPINOSA,MG,Sudeste,8,2008.0,2023.0,5,False,False,False,False
+A544,BURITIS,MG,Sudeste,9,2008.0,2025.0,3,False,False,False,False
+A545,PIRAPORA,MG,Sudeste,9,2008.0,2025.0,2,False,False,False,False
+A546,GUARDA-MOR,MG,Sudeste,11,2008.0,2024.0,7,True,False,False,False
+A547,SAO ROMAO,MG,Sudeste,10,2008.0,2023.0,3,True,False,False,False
+A548,CHAPADA GAUCHA,MG,Sudeste,10,2008.0,2023.0,2,True,False,False,False
+A549,AGUAS VERMELHAS,MG,Sudeste,8,2008.0,2025.0,3,False,False,False,False
+A550,ITAOBIM,MG,Sudeste,15,2008.0,2024.0,9,True,True,False,False
+A551,RIO PARDO DE MINAS,MG,Sudeste,13,2008.0,2025.0,4,True,False,False,False
+A552,SALINAS,MG,Sudeste,12,2008.0,2025.0,5,True,False,False,False
+A553,JOAO PINHEIRO,MG,Sudeste,9,2008.0,2023.0,4,False,False,False,False
+A554,CARATINGA,MG,Sudeste,15,2008.0,2025.0,5,True,True,False,False
+A555,IBIRITE (ROLA MOCA),MG,Sudeste,15,2009.0,2024.0,14,True,True,True,False
+A556,MANHUACU,MG,Sudeste,7,2012.0,2023.0,3,False,False,False,False
+A557,CORONEL PACHECO,MG,Sudeste,10,2013.0,2025.0,4,True,False,False,False
+A559,JANUARIA,MG,Sudeste,5,2018.0,2025.0,2,False,False,False,False
+A560,POMPEU,MG,Sudeste,3,2022.0,2025.0,2,False,False,False,False
+A561,SAO SEBASTIAO DO PARAISO,MG,Sudeste,6,2016.0,2024.0,3,False,False,False,False
+A562,PATOS DE MINAS,MG,Sudeste,4,2018.0,2025.0,2,False,False,False,False
+A563,JANAUBA,MG,Sudeste,6,2017.0,2025.0,4,False,False,False,False
+A564,DIVINOPOLIS,MG,Sudeste,7,2018.0,2024.0,7,False,False,False,False
+A565,BAMBUI,MG,Sudeste,6,2017.0,2025.0,2,False,False,False,False
+A566,ARACUAI,MG,Sudeste,0,,,0,False,False,False,False
+A567,MACHADO,MG,Sudeste,4,2019.0,2023.0,3,False,False,False,False
+A568,UBERABA,MG,Sudeste,6,2018.0,2025.0,3,False,False,False,False
+A569,SETE LAGOAS,MG,Sudeste,4,2018.0,2025.0,2,False,False,False,False
+A570,OLIVEIRA,MG,Sudeste,6,2018.0,2025.0,2,False,False,False,False
+A571,PARACATU,MG,Sudeste,4,2019.0,2024.0,2,False,False,False,False
+A572,BELO HORIZONTE - SANTO AGOSTINHO,MG,Sudeste,0,,,0,False,False,False,False
+A601,ECOLOGIA AGRICOLA,RJ,Sudeste,19,2003.0,2025.0,8,True,True,False,False
+A602,MARAMBAIA,RJ,Sudeste,13,2004.0,2024.0,5,True,False,False,False
+A603,XEREM,RJ,Sudeste,13,2010.0,2025.0,9,True,False,False,False
+A604,CAMBUCI,RJ,Sudeste,12,2007.0,2025.0,4,True,False,False,False
+A606,ARRAIAL DO CABO,RJ,Sudeste,13,2007.0,2025.0,4,True,False,False,False
+A607,CAMPOS,RJ,Sudeste,15,2007.0,2025.0,8,True,True,False,False
+A608,MACAE,RJ,Sudeste,10,2007.0,2023.0,3,True,False,False,False
+A609,RESENDE,RJ,Sudeste,12,2007.0,2025.0,5,True,False,False,False
+A610,PICO DO COUTO,RJ,Sudeste,11,2007.0,2025.0,4,True,False,False,False
+A611,VALENCA,RJ,Sudeste,14,2007.0,2024.0,4,True,False,False,False
+A612,VITORIA,ES,Sudeste,14,2007.0,2025.0,8,True,False,False,False
+A613,SANTA TERESA,ES,Sudeste,10,2008.0,2025.0,2,True,False,False,False
+A614,LINHARES,ES,Sudeste,13,2007.0,2025.0,6,True,False,False,False
+A615,ALFREDO CHAVES,ES,Sudeste,14,2007.0,2024.0,7,True,False,False,False
+A616,SAO MATEUS,ES,Sudeste,16,2007.0,2025.0,8,True,True,False,False
+A617,ALEGRE,ES,Sudeste,15,2007.0,2025.0,5,True,True,False,False
+A618,TERESOPOLIS,RJ,Sudeste,14,2007.0,2023.0,5,True,False,False,False
+A619,PARATI,RJ,Sudeste,11,2009.0,2024.0,4,True,False,False,False
+A620,SAO TOME,RJ,Sudeste,10,2009.0,2023.0,5,True,False,False,False
+A621,VILA MILITAR,RJ,Sudeste,12,2008.0,2025.0,7,True,False,False,False
+A622,PRES. KENNEDY,ES,Sudeste,9,2009.0,2025.0,2,False,False,False,False
+A623,NOVA VENECIA,ES,Sudeste,9,2009.0,2022.0,5,False,False,False,False
+A624,NOVA FRIBURGO,RJ,Sudeste,13,2011.0,2025.0,7,True,False,False,False
+A625,TRES RIOS,RJ,Sudeste,6,2017.0,2025.0,4,False,False,False,False
+A626,RIO CLARO,RJ,Sudeste,6,2018.0,2025.0,2,False,False,False,False
+A627,NITEROI,RJ,Sudeste,5,2019.0,2025.0,2,False,False,False,False
+A628,ANGRA DOS REIS,RJ,Sudeste,3,2018.0,2023.0,2,False,False,False,False
+A629,CARMO,RJ,Sudeste,5,2019.0,2023.0,5,False,False,False,False
+A630,SANTA MARIA MADALENA,RJ,Sudeste,5,2019.0,2025.0,2,False,False,False,False
+A631,ECOPORANGA,ES,Sudeste,4,2018.0,2023.0,2,False,False,False,False
+A632,MARILANDIA,ES,Sudeste,6,2018.0,2025.0,3,False,False,False,False
+A633,VENDA NOVA DO IMIGRANTE,ES,Sudeste,0,,,0,False,False,False,False
+A634,VILA VELHA,ES,Sudeste,4,2018.0,2025.0,2,False,False,False,False
+A635,ITATIAIA,RJ,Sudeste,3,2019.0,2021.0,3,False,False,False,False
+A636,RIO DE JANEIRO - JACAREPAGUA,RJ,Sudeste,6,2018.0,2024.0,4,False,False,False,False
+A637,Paty do Alferes - Avelar,RJ,Sudeste,3,2023.0,2025.0,3,False,False,False,False
+A652,FORTE DE COPACABANA,RJ,Sudeste,14,2008.0,2023.0,9,True,False,False,False
+A657,AFONSO CLAUDIO,ES,Sudeste,8,2012.0,2025.0,4,False,False,False,False
+A659,SILVA JARDIM,RJ,Sudeste,8,2016.0,2025.0,7,False,False,False,False
+A667,SAQUAREMA,RJ,Sudeste,5,2018.0,2023.0,3,False,False,False,False
+A701,SAO PAULO - MIRANTE,SP,Sudeste,18,2007.0,2025.0,11,True,True,True,False
+A702,CAMPO GRANDE,MS,Centro-Oeste,0,,,0,False,False,False,False
+A703,PONTA PORA,MS,Centro-Oeste,18,2002.0,2025.0,10,True,True,True,False
+A704,TRES LAGOAS,MS,Centro-Oeste,11,2007.0,2025.0,5,True,False,False,False
+A705,BAURU,SP,Sudeste,13,2007.0,2025.0,3,True,False,False,False
+A706,CAMPOS DO JORDAO,SP,Sudeste,12,2007.0,2025.0,6,True,False,False,False
+A707,PRESIDENTE PRUDENTE,SP,Sudeste,16,2007.0,2025.0,5,True,True,False,False
+A708,FRANCA,SP,Sudeste,15,2004.0,2023.0,9,True,True,False,False
+A709,IVINHEMA,MS,Centro-Oeste,7,2008.0,2025.0,2,False,False,False,False
+A710,PARANAIBA,MS,Centro-Oeste,7,2009.0,2025.0,3,False,False,False,False
+A711,SAO CARLOS,SP,Sudeste,12,2008.0,2023.0,4,True,False,False,False
+A712,IGUAPE,SP,Sudeste,0,,,0,False,False,False,False
+A713,SOROCABA,SP,Sudeste,0,,,0,False,False,False,False
+A714,ITAPEVA,SP,Sudeste,9,2007.0,2024.0,4,False,False,False,False
+A715,SAO MIGUEL ARCANJO,SP,Sudeste,0,,,0,False,False,False,False
+A716,OURINHOS,SP,Sudeste,0,,,0,False,False,False,False
+A717,NHUMIRIM,MS,Centro-Oeste,6,2008.0,2025.0,2,False,False,False,False
+A718,RANCHARIA,SP,Sudeste,10,2007.0,2025.0,4,True,False,False,False
+A719,AQUIDAUANA,MS,Centro-Oeste,10,2007.0,2025.0,5,True,False,False,False
+A720,COXIM,MS,Centro-Oeste,11,2007.0,2023.0,8,True,False,False,False
+A721,DOURADOS,MS,Centro-Oeste,12,2007.0,2024.0,4,True,False,False,False
+A722,MIRANDA,MS,Centro-Oeste,11,2007.0,2025.0,4,True,False,False,False
+A723,PORTO MURTINHO,MS,Centro-Oeste,7,2007.0,2025.0,3,False,False,False,False
+A724,CORUMBA,MS,Centro-Oeste,7,2007.0,2023.0,2,False,False,False,False
+A725,AVARE,SP,Sudeste,8,2007.0,2023.0,3,False,False,False,False
+A726,PIRACICABA,SP,Sudeste,8,2007.0,2023.0,4,False,False,False,False
+A727,LINS,SP,Sudeste,10,2007.0,2023.0,3,True,False,False,False
+A728,TAUBATE,SP,Sudeste,8,2007.0,2025.0,3,False,False,False,False
+A729,VOTUPORANGA,SP,Sudeste,11,2007.0,2021.0,4,True,False,False,False
+A730,CHAPADAO DO SUL,MS,Centro-Oeste,7,2007.0,2023.0,4,False,False,False,False
+A731,MARACAJU,MS,Centro-Oeste,9,2008.0,2025.0,4,False,False,False,False
+A732,SAO GABRIEL DO OESTE,MS,Centro-Oeste,8,2009.0,2024.0,3,False,False,False,False
+A733,JALES,SP,Sudeste,9,2008.0,2025.0,4,False,False,False,False
+A734,VALPARAISO,SP,Sudeste,8,2008.0,2025.0,3,False,False,False,False
+A735,JOSE BONIFACIO,SP,Sudeste,8,2008.0,2022.0,4,False,False,False,False
+A736,ARIRANHA,SP,Sudeste,7,2008.0,2024.0,2,False,False,False,False
+A737,IBITINGA,SP,Sudeste,0,,,0,False,False,False,False
+A738,CASA BRANCA,SP,Sudeste,8,2008.0,2023.0,3,False,False,False,False
+A739,ITAPIRA,SP,Sudeste,7,2010.0,2018.0,3,False,False,False,False
+A740,SAO LUIS DO PARAITINGA,SP,Sudeste,10,2008.0,2019.0,4,True,False,False,False
+A741,BARRA BONITA,SP,Sudeste,0,,,0,False,False,False,False
+A742,CASSILANDIA,MS,Centro-Oeste,8,2012.0,2025.0,4,False,False,False,False
+A743,RIO BRILHANTE,MS,Centro-Oeste,14,2009.0,2025.0,7,True,False,False,False
+A744,BRAGANCA PAULISTA,SP,Sudeste,0,,,0,False,False,False,False
+A746,BARRA DO TURVO,SP,Sudeste,10,2010.0,2024.0,5,True,False,False,False
+A747,PRADOPOLIS,SP,Sudeste,16,2009.0,2025.0,9,True,True,False,False
+A748,BARRETOS,SP,Sudeste,10,2011.0,2023.0,7,True,False,False,False
+A749,JUTI,MS,Centro-Oeste,11,2009.0,2024.0,6,True,False,False,False
+A750,AMAMBAI,MS,Centro-Oeste,7,2012.0,2025.0,3,False,False,False,False
+A751,SETE QUEDAS,MS,Centro-Oeste,8,2009.0,2025.0,3,False,False,False,False
+A752,ITAQUIRAI,MS,Centro-Oeste,7,2011.0,2024.0,2,False,False,False,False
+A753,ITUVERAVA,SP,Sudeste,10,2010.0,2025.0,4,True,False,False,False
+A754,SIDROLANDIA,MS,Centro-Oeste,12,2009.0,2024.0,8,True,False,False,False
+A755,BARUERI,SP,Sudeste,11,2012.0,2025.0,4,True,False,False,False
+A756,AGUA CLARA,MS,Centro-Oeste,11,2012.0,2025.0,5,True,False,False,False
+A757,BELA VISTA,MS,Centro-Oeste,7,2012.0,2019.0,6,False,False,False,False
+A758,JARDIM,MS,Centro-Oeste,4,2013.0,2017.0,3,False,False,False,False
+A759,BATAGUASSU,MS,Centro-Oeste,6,2014.0,2025.0,3,False,False,False,False
+A760,COSTA RICA,MS,Centro-Oeste,0,,,0,False,False,False,False
+A761,SONORA,MS,Centro-Oeste,0,,,0,False,False,False,False
+A762,DRACENA,SP,Sudeste,5,2017.0,2023.0,3,False,False,False,False
+A763,MARILIA,SP,Sudeste,7,2018.0,2025.0,6,False,False,False,False
+A764,BEBDOURO,SP,Sudeste,4,2017.0,2025.0,2,False,False,False,False
+A765,BERTIOGA,SP,Sudeste,4,2018.0,2025.0,3,False,False,False,False
+A766,REGISTRO,SP,Sudeste,2,2018.0,2023.0,1,False,False,False,False
+A767,SAO SEBASTIAO,SP,Sudeste,2,2018.0,2019.0,2,False,False,False,False
+A768,TUPA,SP,Sudeste,5,2018.0,2025.0,3,False,False,False,False
+A769,CACHOEIRA PAULISTA,SP,Sudeste,4,2018.0,2024.0,2,False,False,False,False
+A770,SAO SIMAO,SP,Sudeste,6,2020.0,2025.0,6,False,False,False,False
+A771,SAO PAULO - INTERLAGOS,SP,Sudeste,6,2019.0,2025.0,5,False,False,False,False
+A801,PORTO ALEGRE,RS,Sul,19,2007.0,2025.0,19,True,True,True,True
+A802,RIO GRANDE,RS,Sul,0,,,0,False,False,False,False
+A803,SANTA MARIA,RS,Sul,15,2003.0,2024.0,5,True,True,False,False
+A804,SANTANA DO LIVRAMENTO,RS,Sul,0,,,0,False,False,False,False
+A805,SANTO AUGUSTO,RS,Sul,11,2008.0,2024.0,7,True,False,False,False
+A806,FLORIANOPOLIS,SC,Sul,15,2008.0,2023.0,8,True,True,False,False
+A807,CURITIBA,PR,Sul,12,2011.0,2024.0,6,True,False,False,False
+A808,TORRES,RS,Sul,10,2007.0,2023.0,5,True,False,False,False
+A809,URUGUAIANA,RS,Sul,15,2007.0,2024.0,5,True,True,False,False
+A810,SANTA ROSA,RS,Sul,5,2007.0,2018.0,2,False,False,False,False
+A811,CANGUCU,RS,Sul,13,2009.0,2024.0,11,True,False,True,False
+A812,CACAPAVA DO SUL,RS,Sul,12,2007.0,2024.0,4,True,False,False,False
+A813,RIO PARDO,RS,Sul,11,2007.0,2022.0,6,True,False,False,False
+A814,URUSSANGA,SC,Sul,9,2009.0,2023.0,5,False,False,False,False
+A815,SAO JOAQUIM,SC,Sul,12,2010.0,2024.0,7,True,False,False,False
+A816,NOVO HORIZONTE,SC,Sul,9,2009.0,2023.0,5,False,False,False,False
+A817,INDAIAL,SC,Sul,11,2007.0,2023.0,7,True,False,False,False
+A818,IVAI,PR,Sul,12,2007.0,2025.0,7,True,False,False,False
+A819,CASTRO,PR,Sul,11,2007.0,2020.0,5,True,False,False,False
+A820,MAL. CANDIDO RONDON,PR,Sul,11,2007.0,2025.0,3,True,False,False,False
+A821,JOAQUIM TAVORA,PR,Sul,11,2008.0,2025.0,7,True,False,False,False
+A822,NOVA TEBAS,PR,Sul,6,2007.0,2025.0,3,False,False,False,False
+A823,INACIO MARTINS,PR,Sul,10,2007.0,2023.0,4,True,False,False,False
+A824,ICARAIMA,PR,Sul,6,2007.0,2018.0,2,False,False,False,False
+A825,GOIOERE,PR,Sul,1,2023.0,2023.0,1,False,False,False,False
+A826,ALEGRETE,RS,Sul,10,2007.0,2024.0,3,True,False,False,False
+A827,BAGE,RS,Sul,14,2007.0,2024.0,7,True,False,False,False
+A828,ERECHIM,RS,Sul,10,2007.0,2024.0,5,True,False,False,False
+A829,SAO JOSE DOS AUSENTES,RS,Sul,12,2007.0,2022.0,8,True,False,False,False
+A830,SAO BORJA,RS,Sul,7,2008.0,2024.0,1,False,False,False,False
+A831,QUARAI,RS,Sul,13,2008.0,2024.0,6,True,False,False,False
+A832,SAO GABRIEL,RS,Sul,13,2008.0,2024.0,5,True,False,False,False
+A833,SANTIAGO,RS,Sul,8,2010.0,2024.0,3,False,False,False,False
+A834,TRAMANDAI,RS,Sul,10,2009.0,2023.0,6,True,False,False,False
+A835,MARINGA,PR,Sul,13,2007.0,2024.0,5,True,False,False,False
+A836,JAGUARAO,RS,Sul,10,2008.0,2024.0,4,True,False,False,False
+A837,SOLEDADE,RS,Sul,11,2009.0,2024.0,3,True,False,False,False
+A838,CAMAQUA,RS,Sul,10,2007.0,2022.0,4,True,False,False,False
+A839,PASSO FUNDO,RS,Sul,16,2007.0,2024.0,10,True,True,True,False
+A840,BENTO GONCALVES,RS,Sul,13,2008.0,2024.0,5,True,False,False,False
+A841,JOACABA,SC,Sul,11,2008.0,2020.0,8,True,False,False,False
+A842,NOVA FATIMA,PR,Sul,4,2008.0,2014.0,2,False,False,False,False
+A843,DOIS VIZINHOS,PR,Sul,8,2008.0,2024.0,3,False,False,False,False
+A844,LAGOA VERMELHA,RS,Sul,15,2008.0,2024.0,7,True,True,False,False
+A845,BOM JARDIM DA SERRA - MORRO DA IGREJA,SC,Sul,13,2009.0,2023.0,5,True,False,False,False
+A846,FOZ DO IGUACU,PR,Sul,4,2011.0,2024.0,2,False,False,False,False
+A847,ILHA DO MEL,PR,Sul,4,2008.0,2015.0,2,False,False,False,False
+A848,DIONISIO CERQUEIRA,SC,Sul,9,2009.0,2024.0,2,False,False,False,False
+A849,DIAMANTE DO NORTE,PR,Sul,8,2009.0,2023.0,2,False,False,False,False
+A850,PARANAPOEMA,PR,Sul,0,,,0,False,False,False,False
+A851,ITAPOA,SC,Sul,8,2008.0,2023.0,3,False,False,False,False
+A852,SAO LUIZ GONZAGA,RS,Sul,9,2008.0,2023.0,3,False,False,False,False
+A853,CRUZ ALTA,RS,Sul,15,2008.0,2024.0,6,True,True,False,False
+A854,FREDERICO WESTPHALEN,RS,Sul,11,2008.0,2024.0,4,True,False,False,False
+A855,PLANALTO,PR,Sul,7,2009.0,2025.0,3,False,False,False,False
+A856,PALMEIRA DAS MISSOES,RS,Sul,10,2010.0,2024.0,3,True,False,False,False
+A857,SAO MIGUEL DO OESTE,SC,Sul,8,2009.0,2019.0,4,False,False,False,False
+A858,XANXERE,SC,Sul,9,2009.0,2023.0,4,False,False,False,False
+A859,CACADOR,SC,Sul,12,2009.0,2023.0,6,True,False,False,False
+A860,CURITIBANOS,SC,Sul,13,2009.0,2025.0,5,True,False,False,False
+A861,RIO DO CAMPO,SC,Sul,9,2010.0,2025.0,6,False,False,False,False
+A862,RIO NEGRINHO,SC,Sul,9,2009.0,2025.0,4,False,False,False,False
+A863,ITUPORANGA,SC,Sul,11,2009.0,2025.0,4,True,False,False,False
+A864,MAJOR VIEIRA,SC,Sul,12,2011.0,2025.0,8,True,False,False,False
+A865,LAGES,SC,Sul,6,2015.0,2025.0,2,False,False,False,False
+A866,Laguna  - Farol de Santa Marta,SC,Sul,8,2009.0,2023.0,2,False,False,False,False
+A867,ARARANGUA,SC,Sul,12,2009.0,2025.0,4,True,False,False,False
+A868,ITAJAI,SC,Sul,10,2011.0,2025.0,5,True,False,False,False
+A869,CIDADE GAUCHA,PR,Sul,6,2009.0,2023.0,2,False,False,False,False
+A870,RANCHO QUEIMADO,SC,Sul,6,2017.0,2025.0,3,False,False,False,False
+A871,JAPIRA,PR,Sul,11,2009.0,2025.0,3,True,False,False,False
+A872,VENTANIA,PR,Sul,0,,,0,False,False,False,False
+A873,MORRETES,PR,Sul,10,2011.0,2024.0,7,True,False,False,False
+A874,SAO MATEUS DO SUL,PR,Sul,10,2012.0,2025.0,3,True,False,False,False
+A875,GENERAL CARNEIRO,PR,Sul,9,2009.0,2021.0,6,False,False,False,False
+A876,CLEVELANDIA,PR,Sul,12,2009.0,2025.0,4,True,False,False,False
+A878,MOSTARDAS,RS,Sul,7,2009.0,2023.0,2,False,False,False,False
+A879,CANELA,RS,Sul,13,2009.0,2024.0,8,True,False,False,False
+A880,VACARIA,RS,Sul,11,2009.0,2024.0,3,True,False,False,False
+A881,DOM PEDRITO,RS,Sul,6,2011.0,2024.0,2,False,False,False,False
+A882,TEUTONIA,RS,Sul,8,2013.0,2023.0,3,False,False,False,False
+A883,IBIRUBA,RS,Sul,7,2016.0,2023.0,5,False,False,False,False
+A884,CAMPO BOM,RS,Sul,11,2014.0,2024.0,11,True,False,True,False
+A886,TUPANCIRETA,RS,Sul,0,,,0,False,False,False,False
+A887,CAPAO DO LEAO (PELOTAS),RS,Sul,4,2020.0,2024.0,2,False,False,False,False
+A889,SAO VICENTE DO SUL,RS,Sul,4,2017.0,2022.0,2,False,False,False,False
+A893,ENCRUZILHADA DO SUL,RS,Sul,3,2020.0,2023.0,2,False,False,False,False
+A894,SERAFINA CORREA,RS,Sul,7,2017.0,2024.0,4,False,False,False,False
+A895,CHAPECO,SC,Sul,0,,,0,False,False,False,False
+A897,CAMBARA DO SUL,RS,Sul,5,2017.0,2024.0,2,False,False,False,False
+A898,CAMPOS NOVOS,SC,Sul,6,2020.0,2025.0,6,False,False,False,False
+A899,Santa Vitoria do Palmar - Barra do Chui,RS,Sul,10,2009.0,2024.0,3,True,False,False,False
+A901,CUIABA,MT,Centro-Oeste,0,,,0,False,False,False,False
+A902,TANGARA DA SERRA,MT,Centro-Oeste,7,2005.0,2024.0,2,False,False,False,False
+A903,S.J. DO RIO CLARO,MT,Centro-Oeste,8,2004.0,2025.0,3,False,False,False,False
+A904,SORRISO,MT,Centro-Oeste,10,2003.0,2024.0,5,True,False,False,False
+A905,CAMPO NOVO DOS PARECIS,MT,Centro-Oeste,4,2003.0,2018.0,1,False,False,False,False
+A906,GUARANTA DO NORTE,MT,Centro-Oeste,11,2004.0,2024.0,3,True,False,False,False
+A907,RONDONOPOLIS,MT,Centro-Oeste,13,2004.0,2025.0,5,True,False,False,False
+A908,AGUA BOA,MT,Centro-Oeste,9,2007.0,2025.0,4,False,False,False,False
+A909,ALTO ARAGUAIA,MT,Centro-Oeste,6,2012.0,2024.0,2,False,False,False,False
+A910,APIACAS,MT,Centro-Oeste,4,2007.0,2023.0,2,False,False,False,False
+A911,SAPEZAL,MT,Centro-Oeste,0,,,0,False,False,False,False
+A912,CAMPO VERDE,MT,Centro-Oeste,0,,,0,False,False,False,False
+A913,COMODORO,MT,Centro-Oeste,8,2007.0,2023.0,5,False,False,False,False
+A914,JUARA,MT,Centro-Oeste,6,2009.0,2018.0,3,False,False,False,False
+A915,PARANATINGA,MT,Centro-Oeste,3,2007.0,2024.0,1,False,False,False,False
+A916,QUERENCIA,MT,Centro-Oeste,7,2008.0,2024.0,2,False,False,False,False
+A917,SINOP,MT,Centro-Oeste,4,2007.0,2024.0,2,False,False,False,False
+A919,COTRIGUACU,MT,Centro-Oeste,7,2008.0,2025.0,3,False,False,False,False
+A920,JUINA,MT,Centro-Oeste,7,2009.0,2023.0,2,False,False,False,False
+A921,SAO FELIX  DO ARAGUAIA,MT,Centro-Oeste,4,2009.0,2016.0,1,False,False,False,False
+A922,VILA BELA DA SANTISSIMA TRINDADE,MT,Centro-Oeste,3,2007.0,2020.0,2,False,False,False,False
+A923,PRIMAVERA DO LESTE,MT,Centro-Oeste,3,2018.0,2023.0,1,False,False,False,False
+A924,ALTA FLORESTA,MT,Centro-Oeste,0,,,0,False,False,False,False
+A925,PORTO VELHO,RO,Norte,0,,,0,False,False,False,False
+A926,CARLINDA,MT,Centro-Oeste,0,,,0,False,False,False,False
+A927,BRASNORTE (MUNDO NOVO),MT,Centro-Oeste,0,,,0,False,False,False,False
+A928,NOVA MARINGA,MT,Centro-Oeste,0,,,0,False,False,False,False
+A929,NOVA UBIRATA,MT,Centro-Oeste,0,,,0,False,False,False,False
+A930,GAUCHA DO NORTE,MT,Centro-Oeste,7,2009.0,2023.0,2,False,False,False,False
+A931,SANTO ANTONIO DO LESTE,MT,Centro-Oeste,10,2009.0,2024.0,4,True,False,False,False
+A932,GUIRATINGA,MT,Centro-Oeste,9,2009.0,2023.0,3,False,False,False,False
+A933,ITIQUIRA,MT,Centro-Oeste,0,,,0,False,False,False,False
+A934,ALTO TAQUARI,MT,Centro-Oeste,12,2009.0,2024.0,3,True,False,False,False
+A935,PORTO ESTRELA,MT,Centro-Oeste,0,,,0,False,False,False,False
+A936,SALTO DO CEU,MT,Centro-Oeste,10,2009.0,2024.0,3,True,False,False,False
+A937,PONTES E LACERDA,MT,Centro-Oeste,11,2009.0,2023.0,7,True,False,False,False
+A938,VILHENA,RO,Norte,9,2011.0,2024.0,4,False,False,False,False
+A939,CACOAL,RO,Norte,10,2010.0,2025.0,3,True,False,False,False
+A940,ARIQUEMES,RO,Norte,5,2011.0,2019.0,3,False,False,False,False
+A941,CACERES,MT,Centro-Oeste,6,2013.0,2020.0,3,False,False,False,False
+A942,SAO JOSE DO XINGU,MT,Centro-Oeste,1,2020.0,2020.0,1,False,False,False,False
+A943,SERRA NOVA DOURADA,MT,Centro-Oeste,1,2020.0,2020.0,1,False,False,False,False
+A944,ROSARIO OESTE,MT,Centro-Oeste,3,2023.0,2025.0,3,False,False,False,False
+A945,BARRA DO GARCAS,MT,Centro-Oeste,0,,,0,False,False,False,False
+A947,NOVO SANTO ANTONIO,MT,Centro-Oeste,0,,,0,False,False,False,False
+A949,DIAMANTINO,MT,Centro-Oeste,0,,,0,False,False,False,False
+A950,ITANHANGA,MT,Centro-Oeste,0,,,0,False,False,False,False
+A954,COCALINHO,MT,Centro-Oeste,0,,,0,False,False,False,False
+A955,LUCAS DO RIO VERDE,MT,Centro-Oeste,0,,,0,False,False,False,False
+B803,CAMPINA DA LAGOA,PR,Sul,3,2017.0,2025.0,2,False,False,False,False
+B804,LARANJEIRAS DO SUL,PR,Sul,4,2017.0,2024.0,2,False,False,False,False
+B806,COLOMBO,PR,Sul,7,2017.0,2025.0,4,False,False,False,False
+B807,PORTO ALEGRE- BELEM NOVO,RS,Sul,2,2023.0,2024.0,2,False,False,False,False
+B808,CACHOEIRINHA,RS,Sul,0,,,0,False,False,False,False
+B809,SAPUCAIA DO SUL,RS,Sul,0,,,0,False,False,False,False
+B810,PARQUE ELDORADO,RS,Sul,0,,,0,False,False,False,False
+B811,SERTAO SANTANA,RS,Sul,0,,,0,False,False,False,False
+B812,CHARQUEADAS,RS,Sul,0,,,0,False,False,False,False
+B813,MINAS DO LEAO,RS,Sul,0,,,0,False,False,False,False
+B814,MONTENEGRO,RS,Sul,0,,,0,False,False,False,False
+B816,SANTA MARIA DO HERVAL,RS,Sul,0,,,0,False,False,False,False
+B817,CAXIAS DO SUL - CRIUVA,RS,Sul,0,,,0,False,False,False,False
+B818,CAXIAS DO SUL - AEROPORTO,RS,Sul,0,,,0,False,False,False,False
+B819,ROLANTE,RS,Sul,0,,,0,False,False,False,False
+B820,SAO FRANCISCO DE PAULA,RS,Sul,0,,,0,False,False,False,False
+B821,SANTANA DA BOA VISTA,RS,Sul,0,,,0,False,False,False,False
+B822,CACHOEIRA DO SUL,RS,Sul,0,,,0,False,False,False,False
+B823,PINHEIRO MACHADO,RS,Sul,0,,,0,False,False,False,False
+B825,PORTO ALEGRE - BELEM NOVO,RS,Sul,0,,,0,False,False,False,False
+B826,HERVAL,RS,Sul,0,,,0,False,False,False,False
+B827,BAGE - CENTRO,RS,Sul,0,,,0,False,False,False,False
+B828,ACEGUA,RS,Sul,0,,,0,False,False,False,False
+B829,SANTA VITORIA DO PALMAR (RESERVA DO TAIM),RS,Sul,0,,,0,False,False,False,False
+B830,SANTA VITORIA DO PALMAR (CENTRO),RS,Sul,0,,,0,False,False,False,False
+B832,CAPAO DA CANOA,RS,Sul,0,,,0,False,False,False,False
+B836,PALMARES DO SUL,RS,Sul,0,,,0,False,False,False,False
+B839,SANTO ANTONIO DA PATRULHA,RS,Sul,0,,,0,False,False,False,False
+B841,TORRES,RS,Sul,0,,,0,False,False,False,False
+F501,BELO HORIZONTE - CERCADINHO,MG,Sudeste,11,2015.0,2025.0,11,True,False,True,False
+S101,FORTE PRINCIPE,RO,Norte,0,,,0,False,False,False,False
+S102,PEF IPIRANGA,AM,Norte,0,,,0,False,False,False,False
+S103,CRMN MANAUS,AM,Norte,0,,,0,False,False,False,False
+S104,DTCEA VILHENA,RO,Norte,0,,,0,False,False,False,False
+S105,DTCEA TABATINGA,AM,Norte,0,,,0,False,False,False,False
+S107,DOM ELISEU,PA,Norte,0,,,0,False,False,False,False
+S108,SAO BENTO,MA,Nordeste,0,,,0,False,False,False,False
+S110,DTCEA GUAJARA-MIRIM,RO,Norte,0,,,0,False,False,False,False
+S113,BALIZA,RR,Norte,0,,,0,False,False,False,False
+S114,PACARAIMA,RR,Norte,0,,,0,False,False,False,False
+S115,PEF YAUARETE,AM,Norte,0,,,0,False,False,False,False
+S116,PEF ESTIRAO DO EQUADOR,AM,Norte,0,,,0,False,False,False,False
+S117,DTCEA TEFE,AM,Norte,1,2018.0,2018.0,1,False,False,False,False
+S120,DTCEA JACAREACANGA,PA,Norte,1,2018.0,2018.0,1,False,False,False,False
+S121,SANTA ISABEL DO RIO NEGRO,AM,Norte,0,,,0,False,False,False,False
+S122,EB_PEF_BONFIM,MG,Sudeste,0,,,0,False,False,False,False
+S701,ANGELICA,MS,Centro-Oeste,1,2020.0,2020.0,1,False,False,False,False
+S702,ARAL MOREIRA,MS,Centro-Oeste,1,2020.0,2020.0,1,False,False,False,False
+S703,BANDEIRANTES,MS,Centro-Oeste,0,,,0,False,False,False,False
+S704,BONITO,MS,Centro-Oeste,1,2020.0,2020.0,1,False,False,False,False
+S705,BRASILANDIA,MS,Centro-Oeste,0,,,0,False,False,False,False
+S706,CAARAPO,MS,Centro-Oeste,0,,,0,False,False,False,False
+S707,CAMAPUA,MS,Centro-Oeste,0,,,0,False,False,False,False
+S708,FATIMA DO SUL,MS,Centro-Oeste,0,,,0,False,False,False,False
+S709,IGUATEMI,MS,Centro-Oeste,1,2020.0,2020.0,1,False,False,False,False
+S710,ITAPORA,MS,Centro-Oeste,1,2020.0,2020.0,1,False,False,False,False
+S711,LAGUNA CARAPA,MS,Centro-Oeste,0,,,0,False,False,False,False
+S712,NOVA ALVORADA DO SUL,MS,Centro-Oeste,0,,,0,False,False,False,False
+S713,NOVA ANDRADINA,MS,Centro-Oeste,0,,,0,False,False,False,False
+S714,PEDRO GOMES,MS,Centro-Oeste,0,,,0,False,False,False,False
+S715,RIBAS DO RIO PARDO,MS,Centro-Oeste,1,2020.0,2020.0,1,False,False,False,False
+S716,SANTA RITA DO PARDO,MS,Centro-Oeste,1,2020.0,2020.0,1,False,False,False,False
+S717,SELVIRIA,MS,Centro-Oeste,1,2019.0,2019.0,1,False,False,False,False

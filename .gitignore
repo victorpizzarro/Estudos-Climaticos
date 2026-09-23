@@ -1,0 +1,63 @@
+# ==========================================================
+# PYTHON
+# ==========================================================
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# VS Code local
+.vscode/
+
+# ==========================================================
+# SEGREDOS / CREDENCIAIS
+# ==========================================================
+
+.env
+.env.*
+.cdsapirc
+*.key
+*.pem
+
+# ==========================================================
+# DADOS BRUTOS E INTERMEDIÁRIOS PESADOS
+# ==========================================================
+
+**/data/raw/**
+**/data/interim/**
+
+# Formatos climáticos pesados
+*.grib
+*.grib1
+*.grib2
+*.idx
+*.nc
+*.nc4
+
+# Arquivos Parquet intermediários/grandes
+*.parquet
+
+# Downloads e compactados
+*.zip
+*.tar
+*.tar.gz
+
+# ==========================================================
+# TEMPORÁRIOS
+# ==========================================================
+
+*.tmp
+*.part
+*.log

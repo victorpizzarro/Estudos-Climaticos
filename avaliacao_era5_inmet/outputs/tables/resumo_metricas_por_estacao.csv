@@ -1,0 +1,2 @@
+estacoes_total,estacoes_interpretaveis_min100,pares_validacao_principal,pares_amostra_completa,pares_removidos_qc,estacoes_afetadas_qc,bias_mediano_estacoes,mae_mediano_estacoes,rmse_mediano_estacoes,correlacao_mediana_estacoes
+645,645,71901988,71927348,25360,3,-0.36646419643558503,1.4402850749836622,1.8428700653808285,0.9356578755003664

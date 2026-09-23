@@ -1,0 +1,2 @@
+registros_estacao_ano,estacoes_unicas,celulas_era5_unicas,duplicados_estacao_ano,indices_invalidos,distancia_min_km,distancia_media_km,distancia_mediana_km,distancia_p95_km,distancia_max_km,alertas_distancia,estacoes_multiplas_celulas
+9716,645,688,0,0,0.7868978428562735,10.513574348986513,11.154867469701339,16.427331471854878,19.13460142230741,0,60

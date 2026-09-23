@@ -1,0 +1,5 @@
+rede,nome_rede,metodo,n_estacoes,n_mesmo_sinal,pct_mesmo_sinal
+principal_15a,>=15 anos válidos,MK clássico,45,40,88.88888888888889
+sensibilidade_10a,>=10 anos válidos,MK clássico,214,175,81.77570093457945
+principal_consecutiva_15a,>=15 anos consecutivos,Hamed-Rao,9,8,88.88888888888889
+sensibilidade_consecutiva_10a,>=10 anos consecutivos,Hamed-Rao,27,20,74.07407407407408

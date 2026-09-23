@@ -1,0 +1,9 @@
+categoria,arquivo,descricao
+Amostra,/Users/leo_sandes/Desktop/brasil_era5/projetos/avaliacao_era5_inmet/outputs/tables/final_resumo_amostra.csv,"Tamanho da amostra, pares e filtros principais"
+Validacao,/Users/leo_sandes/Desktop/brasil_era5/projetos/avaliacao_era5_inmet/outputs/tables/final_resumo_validacao_era5_inmet.csv,"Bias, MAE, RMSE e correlacao finais"
+Tendencias,/Users/leo_sandes/Desktop/brasil_era5/projetos/avaliacao_era5_inmet/outputs/tables/final_resumo_tendencias.csv,"Sen slopes, concordancia e FDR nas quatro redes"
+Redes,/Users/leo_sandes/Desktop/brasil_era5/projetos/avaliacao_era5_inmet/outputs/tables/final_resumo_redes_extremos.csv,Distribuicao espacial das redes de extremos
+Robustez detalhada,/Users/leo_sandes/Desktop/brasil_era5/projetos/avaliacao_era5_inmet/outputs/tables/robustez_tendencias_sintese.csv,Sintese produzida pelo 06j
+MK modificado,/Users/leo_sandes/Desktop/brasil_era5/projetos/avaliacao_era5_inmet/outputs/tables/resumo_mk_modificado_rede.csv,Resumo Hamed-Rao e autocorrelacao
+Tendencias regionais,/Users/leo_sandes/Desktop/brasil_era5/projetos/avaliacao_era5_inmet/outputs/tables/resumo_tendencias_extremos_regiao.csv,Resumo das Sen slopes por regiao
+Paineis fixos,/Users/leo_sandes/Desktop/brasil_era5/projetos/avaliacao_era5_inmet/outputs/tables/paineis_fixos_extremos_anuais_corrigido.csv,Paineis consecutivos terminando em 2025

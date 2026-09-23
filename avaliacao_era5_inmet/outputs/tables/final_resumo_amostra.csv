@@ -1,0 +1,9 @@
+indicador,valor,unidade
+Estacoes INMET totais processadas,648.0,estacoes
+Estacoes elegiveis espacialmente pareadas,645.0,estacoes
+Pares horarios completos antes do QC final,71927348.0,pares
+Pares horarios na amostra analitica principal,71901988.0,pares
+Pares excluidos por anomalias temporais,25360.0,pares
+Percentual excluido da amostra pareada,0.035258,%
+Estacao-ano aptas para extremos antes do criterio mensal,6551.0,estacao-ano
+Estacao-ano aptas para extremos apos 12 meses >=80%,4462.0,estacao-ano

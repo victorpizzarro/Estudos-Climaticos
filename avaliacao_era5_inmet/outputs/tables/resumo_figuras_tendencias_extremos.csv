@@ -1,0 +1,7 @@
+tipo,rede,variavel,n_estacoes,sen_mediana_c_decada,sen_media_c_decada,n_slope_positivo,n_slope_negativo,n_significativo_fdr
+mapa,principal_15a,tmax_inmet,45,0.8749985694885254,0.8417774475970068,40,4,0
+mapa,principal_15a,tmax_era5,45,0.903063322368421,0.9364368807212718,45,0,0
+mapa,principal_15a,delta_tmax,45,0.031476338704427086,0.03512588805071179,24,21,0
+mapa,sensibilidade_10a,tmax_inmet,214,0.8333333333333333,0.8563266909677216,182,26,0
+mapa,sensibilidade_10a,tmax_era5,214,0.7386783119681832,0.8486995365742053,197,17,0
+mapa,sensibilidade_10a,delta_tmax,214,0.03822580973307292,-0.005028693050116438,116,98,0

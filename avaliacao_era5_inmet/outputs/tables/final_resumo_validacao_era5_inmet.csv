@@ -1,0 +1,9 @@
+escala,area,bias_c,mae_c,rmse_c,correlacao,observacao
+Estacao - distribuicao geral,Brasil,-0.3665,1.4403,1.8429,0.9357,Medianas das metricas por estacao na amostra principal
+Anual - todos os pares,Brasil,-0.4029,1.5256,2.0031,0.9385,"Mediana entre anos, agregacao por todos os pares horarios"
+Anual - peso igual por estacao-ano,Brasil,-0.4086,,2.0009,0.9351,Mediana entre anos; correlacao = mediana das estacoes
+Anual - todos os pares,Norte,-0.4507,1.4946,1.9407,0.8794,Mediana anual regional
+Anual - todos os pares,Nordeste,-0.5895,1.403,1.8292,0.9239,Mediana anual regional
+Anual - todos os pares,Centro-Oeste,-0.2171,1.5008,1.9608,0.929,Mediana anual regional
+Anual - todos os pares,Sudeste,-0.3224,1.7064,2.2378,0.9097,Mediana anual regional
+Anual - todos os pares,Sul,-0.2857,1.4548,1.9325,0.9494,Mediana anual regional
