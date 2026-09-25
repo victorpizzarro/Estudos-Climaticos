@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Köppen-Geiger via ERA5</title>
+<style>
+  @page {
+    size: A4;
+    margin: 2.2cm 2cm 2.4cm 2cm;
+    @bottom-center {
+      content: "Página " counter(page) " de " counter(pages);
+      font-family: "Noto Sans", sans-serif;
+      font-size: 8.5pt;
+      color: #888;
+    }
+  }
+  @page cover {
+    margin: 0;
+    @bottom-center { content: none; }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Noto Serif", "DejaVu Serif", serif;
+    font-size: 10.3pt;
+    line-height: 1.5;
+    color: #1a1a1a;
+  }
+  h1, h2, h3, h4 {
+    font-family: "Noto Sans", "DejaVu Sans", sans-serif;
+    color: #0b3d5c;
+    line-height: 1.25;
+  }
+  h1 { font-size: 19pt; margin: 0 0 4pt 0; }
+  h2 {
+    font-size: 14pt;
+    margin: 26pt 0 8pt 0;
+    padding-bottom: 4pt;
+    border-bottom: 1.6pt solid #0b3d5c;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-size: 11.5pt;
+    margin: 16pt 0 6pt 0;
+    color: #145374;
+    page-break-after: avoid;
+  }
+  h4 {
+    font-size: 10.3pt;
+    margin: 12pt 0 4pt 0;
+    color: #3a6b87;
+    page-break-after: avoid;
+  }
+  p { margin: 0 0 8pt 0; text-align: justify; }
+  ul, ol { margin: 0 0 10pt 0; padding-left: 18pt; }
+  li { margin-bottom: 3pt; text-align: justify; }
+  code, .mono {
+    font-family: "DejaVu Sans Mono", monospace;
+    font-size: 8.8pt;
+    background: #f0f3f5;
+    padding: 1px 4px;
+    border-radius: 3px;
+  }
+  pre {
+    font-family: "DejaVu Sans Mono", monospace;
+    font-size: 8.1pt;
+    line-height: 1.45;
+    background: #f5f7f8;
+    border: 0.6pt solid #dbe2e6;
+    border-left: 3pt solid #0b3d5c;
+    padding: 8pt 10pt;
+    white-space: pre-wrap;
+    border-radius: 3px;
+    page-break-inside: avoid;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 8pt 0 12pt 0;
+    font-size: 9pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 0.6pt solid #cbd5db;
+    padding: 4pt 7pt;
+    text-align: left;
+  }
+  th {
+    background: #0b3d5c;
+    color: white;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-size: 8.6pt;
+  }
+  tr:nth-child(even) td { background: #f4f7f9; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td.bad { color: #b3261e; font-weight: 600; }
+  td.ok { color: #1e6b3a; font-weight: 600; }
+
+  figure {
+    margin: 12pt 0;
+    text-align: center;
+    page-break-inside: avoid;
+  }
+  figure img {
+    max-width: 100%;
+    border: 0.6pt solid #d9e0e4;
+  }
+  figcaption {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 8.6pt;
+    color: #555;
+    margin-top: 5pt;
+    text-align: left;
+    line-height: 1.4;
+  }
+  figcaption b { color: #0b3d5c; }
+
+  .callout {
+    background: #eef4f8;
+    border-left: 3pt solid #0b3d5c;
+    padding: 8pt 12pt;
+    margin: 10pt 0;
+    font-size: 9.6pt;
+  }
+  .callout.warn {
+    background: #fdf2f0;
+    border-left-color: #b3261e;
+  }
+  .callout.ok {
+    background: #eef7f0;
+    border-left-color: #1e6b3a;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .badge {
+    display: inline-block;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 7.8pt;
+    font-weight: 700;
+    padding: 1.5pt 6pt;
+    border-radius: 8pt;
+    color: white;
+    margin-right: 4pt;
+  }
+  .badge.blue { background: #0b3d5c; }
+  .badge.gray { background: #6b7a82; }
+
+  .tech-grid {
+    display: block;
+    margin: 10pt 0;
+  }
+  .tech-item {
+    border: 0.6pt solid #dbe2e6;
+    border-radius: 4pt;
+    padding: 8pt 10pt;
+    margin-bottom: 7pt;
+    page-break-inside: avoid;
+  }
+  .tech-item .name {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+    color: #0b3d5c;
+    font-size: 10pt;
+  }
+  .tech-item .why { margin-top: 3pt; font-size: 9.3pt; }
+
+  .section-break { page-break-before: always; }
+
+  .toc { margin: 20pt 0; }
+  .toc ol { list-style: none; padding-left: 0; }
+  .toc li { margin-bottom: 7pt; font-family: "Noto Sans", sans-serif; font-size: 10pt; }
+  .toc .sub { padding-left: 16pt; font-size: 9pt; color: #444; margin-bottom: 4pt; }
+  .toc a { color: #1a1a1a; text-decoration: none; }
+  .toc .num { color: #0b3d5c; font-weight: 700; margin-right: 6pt; }
+
+  .kv { width: 100%; border-collapse: collapse; margin: 8pt 0; }
+  .kv td { border: none; padding: 2pt 8pt 2pt 0; vertical-align: top; }
+  .kv td.k { font-family: "Noto Sans", sans-serif; font-weight: 700; color: #0b3d5c; width: 34%; }
+
+  .cover {
+    page: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3.2cm;
+    background: linear-gradient(160deg, #0b3d5c 0%, #145374 55%, #1c6b8f 100%);
+    color: white;
+  }
+  .cover .kicker {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 10.5pt;
+    letter-spacing: 2.5pt;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: 14pt;
+  }
+  .cover h1 {
+    color: white;
+    font-size: 30pt;
+    margin-bottom: 10pt;
+  }
+  .cover .subtitle {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 13pt;
+    font-weight: 300;
+    opacity: 0.92;
+    margin-bottom: 40pt;
+    max-width: 80%;
+  }
+  .cover .meta {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 9.5pt;
+    opacity: 0.85;
+    border-top: 0.6pt solid rgba(255,255,255,0.35);
+    padding-top: 14pt;
+    max-width: 75%;
+  }
+  .cover .meta div { margin-bottom: 3pt; }
+</style>
+</head>
+<body>
+
+<!-- ===================== CAPA ===================== -->
+<div class="cover">
+  <div class="kicker">Documentação técnica &middot; Análise exploratória</div>
+  <h1>Classificação Climática de Köppen&#8211;Geiger a partir do ERA5 (1995&#8211;2025)</h1>
+  <div class="subtitle">
+    Reprodução exploratória, com dados modernos de reanálise, do mapa de
+    Alvares&nbsp;et&nbsp;al.&nbsp;(2013) &#8212; <i>"Köppen's climate classification map for Brazil"</i>,
+    Meteorologische Zeitschrift.
+  </div>
+  <div class="meta">
+    <div><b>Período dos dados:</b> janeiro/1995 a dezembro/2025 (31 anos)</div>
+    <div><b>Fonte:</b> ERA5 monthly averaged reanalysis (Copernicus Climate Data Store)</div>
+    <div><b>Área coberta:</b> recorte parcial do Brasil (lat -14&deg;/-25.5&deg;, lon -53.5&deg;/-39.5&deg;)</div>
+    <div><b>Ferramentas:</b> earthkit-data, xarray, numpy, geopandas, matplotlib</div>
+  </div>
+</div>
+
+<!-- ===================== SUMÁRIO ===================== -->
+<div class="section-break"></div>
+<h2 style="border:none; margin-top:0;">Sumário</h2>
+<div class="toc">
+  <ol>
+    <li><a class="num">1</a>Introdução e objetivo</li>
+    <li><a class="num">2</a>Fonte de dados</li>
+    <li class="sub">2.1 O problema com o request original &middot; 2.2 Request corrigido</li>
+    <li><a class="num">3</a>Tecnologias usadas e por quê</li>
+    <li><a class="num">4</a>Metodologia</li>
+    <li class="sub">4.1 Carregamento e conversão de unidades &middot; 4.2 Climatologia mensal &middot;
+        4.3 Algoritmo de Köppen&#8211;Geiger &middot; 4.4 Delimitação suave dos estados</li>
+    <li><a class="num">5</a>Verificação do algoritmo</li>
+    <li class="sub">5.1 Testes sintéticos &middot; 5.2 Validação contra o artigo original</li>
+    <li><a class="num">6</a>Resultados</li>
+    <li class="sub">6.1 Análise exploratória &middot; 6.2 Climatologia espacial &middot;
+        6.3 Mapa de Köppen &middot; 6.4 Sensibilidade temporal (1995&#8211;2010 vs. 2011&#8211;2025)</li>
+    <li><a class="num">7</a>Limitações e ressalvas metodológicas</li>
+    <li><a class="num">8</a>Referências</li>
+  </ol>
+</div>
+
+<!-- ===================== 1. INTRODUÇÃO ===================== -->
+<div class="section-break"></div>
+<h2>1. Introdução e objetivo</h2>
+<p>
+Este documento descreve a metodologia, as tecnologias e os resultados de uma análise exploratória
+que reproduz, com dados de reanálise ERA5 (1995&#8211;2025), a lógica de classificação climática
+proposta por Köppen (1936) e aplicada ao Brasil por Alvares et al. (2013) no artigo
+<i>"Köppen's climate classification map for Brazil"</i> (Meteorologische Zeitschrift, v.&nbsp;22, n.&nbsp;6).
+</p>
+<p>
+O artigo original constrói um mapa de 1&nbsp;ha de resolução a partir de 2.950 estações meteorológicas
+brasileiras, com normais climatológicas de 1950&#8211;1990, interpoladas por krigagem (precipitação) e por
+um modelo multivariado de temperatura em função de latitude, longitude e altitude (SRTM). O objetivo aqui
+não é replicar esse resultado com a mesma fidelidade &#8212; a diferença de fonte de dados, resolução e período
+impede isso &#8212; mas sim <b>aplicar o mesmo algoritmo de decisão</b> (Tabela&nbsp;1 do artigo, idêntico a
+Kottek et al. 2006 / Peel et al. 2007) sobre um produto de dados moderno, gratuito e atualizado, discutindo
+onde e por que os resultados convergem ou divergem do mapa de referência.
+</p>
+<div class="callout">
+  <p><b>Escopo real dos dados obtidos.</b> Por uma limitação na área geográfica solicitada ao Copernicus
+  Climate Data Store, o recorte final cobre apenas parte do Brasil &#8212; aproximadamente Goiás, Distrito
+  Federal, Mato Grosso do Sul, Minas Gerais, São Paulo, parte do Paraná e do sul da Bahia/Tocantins
+  (lat -14&deg; a -25.5&deg;, lon -53.5&deg; a -39.5&deg;) &#8212; e não o território nacional completo do artigo
+  original. Essa limitação está documentada na Seção&nbsp;2 e refletida em todos os mapas.</p>
+</div>
+
+<!-- ===================== 2. FONTE DE DADOS ===================== -->
+<h2>2. Fonte de dados</h2>
+<table class="kv">
+  <tr><td class="k">Produto</td><td><code>reanalysis-era5-single-levels-monthly-means</code></td></tr>
+  <tr><td class="k">Provedor</td><td>Copernicus Climate Data Store (CDS), ECMWF</td></tr>
+  <tr><td class="k">Variáveis</td><td><code>2m_temperature</code> (2t) e <code>total_precipitation</code> (tp)</td></tr>
+  <tr><td class="k">Tipo de produto</td><td><code>monthly_averaged_reanalysis</code></td></tr>
+  <tr><td class="k">Resolução espacial</td><td>grade regular 0.1&deg; (~11 km), reamostrada da grade nativa ~31 km</td></tr>
+  <tr><td class="k">Resolução temporal</td><td>médias mensais, jan/1995 &#8211; dez/2025 (31 anos; 744 campos = 2 variáveis &times; 12 meses &times; 31 anos)</td></tr>
+  <tr><td class="k">Formato do arquivo</td><td>GRIB2</td></tr>
+</table>
+
+<h3>2.1 O problema com o request original</h3>
+<p>
+O primeiro arquivo GRIB obtido (via parâmetros sugeridos por um assistente de IA de propósito geral)
+apresentava dois problemas que impediriam a classificação de Köppen:
+</p>
+<ol>
+  <li><b>Variável incorreta:</b> o arquivo trazia <code>evaporation</code> (e) em vez de
+  <code>total_precipitation</code> (tp). O algoritmo de Köppen depende de precipitação, não de evaporação.</li>
+  <li><b>Área incompleta:</b> a bounding box já estava restrita ao mesmo recorte parcial descrito acima,
+  não cobrindo o Brasil inteiro.</li>
+</ol>
+<p>
+O problema (1) foi corrigido; o problema (2) foi identificado mas <b>mantido deliberadamente</b> nesta
+rodada de análise, a pedido do usuário, para permitir avançar com a validação do algoritmo antes de pagar
+o custo (tempo de download, área de armazenamento) de um request para o Brasil inteiro.
+</p>
+
+<h3>2.2 Request corrigido (cds_request.py)</h3>
+<pre>dataset = "reanalysis-era5-single-levels-monthly-means"
+request = {
+    "product_type": ["monthly_averaged_reanalysis"],
+    "variable": ["2m_temperature", "total_precipitation"],
+    "year": [str(y) for y in range(1995, 2026)],
+    "month": [f"{m:02d}" for m in range(1, 13)],
+    "time": ["00:00"],
+    "area": [6, -74, -34, -34],   # Norte, Oeste, Sul, Leste -- Brasil inteiro
+    "data_format": "grib",
+}</pre>
+<p>
+O parâmetro <code>area</code> acima cobriria o Brasil inteiro (caso seja necessário reprocessar); o arquivo
+efetivamente utilizado nesta análise usa uma área menor, como descrito na Seção&nbsp;1.
+</p>
+
+<!-- ===================== 3. TECNOLOGIAS ===================== -->
+<h2>3. Tecnologias usadas e por quê</h2>
+
+<div class="tech-grid">
+  <div class="tech-item">
+    <div class="name">earthkit-data (ECMWF, v1.2.2)</div>
+    <div class="why">Biblioteca oficial do ECMWF para leitura de dados meteorológicos (GRIB/NetCDF).
+    Foi escolhida em vez de usar <code>cfgrib</code> diretamente porque: (a) é o caminho que o próprio
+    ECMWF está consolidando para substituir o uso manual de <code>cdsapi</code> + <code>cfgrib</code>;
+    (b) integra nativamente com o ecossistema <code>earthkit</code> (regrid, climate, plots) caso a
+    análise precise crescer; (c) abstrai detalhes de baixo nível do eccodes mantendo acesso completo aos
+    metadados GRIB quando necessário. Na prática, ela converte o GRIB para <code>xarray.Dataset</code> via
+    <code>to_fieldlist().to_xarray()</code>, e todo o processamento subsequente usa xarray puro.</div>
+  </div>
+  <div class="tech-item">
+    <div class="name">xarray</div>
+    <div class="why">Estrutura de dados N-dimensional rotulada (dimensões <code>time</code>,
+    <code>latitude</code>, <code>longitude</code>), com suporte nativo a agregações temporais
+    (<code>groupby("time.month")</code>, <code>groupby("time.year")</code>) que são o núcleo do cálculo
+    de climatologia mensal. É o padrão de fato para dados meteorológicos em Python.</div>
+  </div>
+  <div class="tech-item">
+    <div class="name">eccodes (bindings Python, via PyPI)</div>
+    <div class="why">Motor de decodificação GRIB usado por baixo do earthkit-data/cfgrib. A versão do PyPI
+    traz binários pré-compilados, o que evitou depender do pacote de sistema <code>eccodes</code>
+    (ausente no Arch Linux usado) e de compilação local.</div>
+  </div>
+  <div class="tech-item">
+    <div class="name">NumPy</div>
+    <div class="why">Toda a lógica de decisão do algoritmo de Köppen (comparações de temperatura/precipitação
+    por célula, mês mais seco, contagem de meses acima de 10&nbsp;°C etc.) foi implementada de forma
+    <b>vetorizada</b> com máscaras booleanas do NumPy, em vez de laços Python por pixel. Isso torna a
+    classificação de ~16 mil células (e suas variações por período) instantânea, viabilizando os testes de
+    sensibilidade da Seção&nbsp;6.4.</div>
+  </div>
+  <div class="tech-item">
+    <div class="name">pandas</div>
+    <div class="why">Tabulação de resultados (distribuição percentual de climas, tabela de validação,
+    contagem de transições entre tipos climáticos).</div>
+  </div>
+  <div class="tech-item">
+    <div class="name">geopandas + shapely</div>
+    <div class="why">Sobreposição dos limites estaduais brasileiros nos mapas. A geometria (GeoJSON de 27
+    estados) é simplificada com <code>geometry.simplify(0.03°, preserve_topology=True)</code> para produzir
+    um traço suave e legível, evitando o serrilhado de um vetor de alta resolução numa grade de ~11&nbsp;km.</div>
+  </div>
+  <div class="tech-item">
+    <div class="name">matplotlib</div>
+    <div class="why">Geração de todos os gráficos e mapas (séries temporais, mapas coropléticos via
+    <code>pcolormesh</code>, paleta categórica customizada no padrão Köppen-Geiger/Peel et al. 2007).
+    Optou-se por não usar cartopy (não instalado no ambiente e desnecessário aqui, já que os dados já vêm
+    em grade lat/lon regular e a delimitação de estados é feita via geopandas sobre os mesmos eixos).</div>
+  </div>
+  <div class="tech-item">
+    <div class="name">Jupyter / nbconvert</div>
+    <div class="why">Notebook como formato de entrega principal (código + narrativa + gráficos juntos,
+    reexecutável). O <code>nbconvert --execute</code> foi usado para rodar o notebook de ponta a ponta de
+    forma reprodutível e determinística a cada alteração, servindo como verificação de regressão.</div>
+  </div>
+  <div class="tech-item">
+    <div class="name">WeasyPrint</div>
+    <div class="why">Geração deste PDF a partir de HTML/CSS. Escolhida por ser pura em Python (sem
+    dependência de um navegador headless como Chromium, ausente no ambiente) e por ter suporte maduro a
+    CSS de paginação (<code>@page</code>, quebras de página, cabeçalho/rodapé com numeração), necessário
+    para um documento com esse nível de formatação.</div>
+  </div>
+</div>
+
+<div class="callout">
+  <p><b>Ambiente:</b> Python&nbsp;3.14 em ambiente virtual isolado (<code>.venv</code>), Arch Linux. Todas as
+  dependências foram instaladas via <code>pip</code> dentro do venv, sem alterar pacotes do sistema.</p>
+</div>
+
+<!-- ===================== 4. METODOLOGIA ===================== -->
+<h2>4. Metodologia</h2>
+
+<h3>4.1 Carregamento e conversão de unidades</h3>
+<p>
+O GRIB é lido com <code>earthkit.data.from_source("file", ...).to_fieldlist().to_xarray()</code>, resultando
+num <code>xarray.Dataset</code> com dimensões <code>time</code> (372 passos mensais), <code>latitude</code>
+(116 pontos) e <code>longitude</code> (141 pontos). Duas conversões de unidade são necessárias:
+</p>
+<ul>
+  <li><b>Temperatura:</b> o ERA5 fornece <code>2t</code> em Kelvin; subtrai-se 273,15 para obter graus Celsius.</li>
+  <li><b>Precipitação:</b> o produto <i>monthly-means</i> do ERA5 fornece <code>tp</code> como uma
+  <b>taxa média diária</b> (metros/dia) para o mês, não como total acumulado. A conversão para o total
+  mensal em milímetros é: <code>precip_mm = tp &times; dias_no_mês &times; 1000</code>, usando
+  <code>time.dt.days_in_month</code> do xarray para tratar corretamente meses de 28/29/30/31 dias.</li>
+</ul>
+<div class="callout ok">
+  <p><b>Validação da conversão:</b> comparando a precipitação anual resultante com normais climatológicas
+  conhecidas, Curitiba (PR) deu 1.513&nbsp;mm/ano no ERA5 contra 1.550&nbsp;mm/ano citados no artigo original
+  (viés de -2%), confirmando que a fórmula de conversão está correta.</p>
+</div>
+
+<h3>4.2 Climatologia mensal (1995&#8211;2025)</h3>
+<p>
+Para cada célula da grade, calcula-se a média dos 31 anos por mês-calendário
+(<code>groupby("time.month").mean("time")</code>), produzindo dois arrays de 12 valores por pixel &#8212;
+temperatura média mensal e precipitação total mensal. É essa climatologia, e não a série mensal bruta, que
+alimenta as regras de Köppen, replicando o conceito de "normal climatológica" (&gt;25 anos) usado no artigo
+original (1950&#8211;1990, 41 anos de estações).
+</p>
+
+<h3>4.3 Algoritmo de Köppen&#8211;Geiger</h3>
+<p>
+A classificação foi implementada como uma função vetorizada em NumPy que replica a Tabela&nbsp;1 do artigo
+(idêntica a Kottek et al. 2006 e Peel et al. 2007, citados no próprio artigo como referência de
+reprodutibilidade). Como toda a região coberta está no hemisfério sul, verão é definido como
+outubro&#8211;março e inverno como abril&#8211;setembro. A ordem de prioridade na avaliação segue o padrão
+Peel et al. (2007):
+</p>
+<table>
+  <tr><th>Ordem</th><th>Zona</th><th>Critério de entrada</th><th>Subtipos</th></tr>
+  <tr><td class="num">1</td><td><b>B</b> &#8211; Árido</td><td>MAP &lt; 10&middot;P<sub>threshold</sub></td>
+      <td>BWh/BWk (árido), BSh/BSk (semiárido); h/k por T<sub>média</sub> &#8377; 18&nbsp;°C</td></tr>
+  <tr><td class="num">2</td><td><b>A</b> &#8211; Tropical</td><td>T<sub>fria</sub> &ge; 18&nbsp;°C</td>
+      <td>Af (P<sub>seca</sub>&ge;60mm), Am (monção), Aw/As (seca inverno/verão)</td></tr>
+  <tr><td class="num">3</td><td><b>E</b> &#8211; Polar</td><td>T<sub>quente</sub> &lt; 10&nbsp;°C</td>
+      <td>ET (tundra), EF (gelo)</td></tr>
+  <tr><td class="num">4</td><td><b>C/D</b> &#8211; Temperado/Continental</td><td>demais casos</td>
+      <td>f/s/w (regime de chuva) &times; a/b/c/d (regime de temperatura)</td></tr>
+</table>
+<p>
+Onde <b>MAP</b> é a precipitação anual e <b>P<sub>threshold</sub></b> segue a formulação padrão:
+2&times;T<sub>média</sub> se &ge;70% da chuva cai no semestre de inverno; 2&times;T<sub>média</sub>+28 se
+&ge;70% cai no verão; e 2&times;T<sub>média</sub>+14 caso contrário. A implementação completa está na
+Seção&nbsp;4 do notebook (função <code>koppen_classify</code>), com tratamento explícito de células sem dado
+válido (oceano dentro da <i>bounding box</i>, rotuladas <code>NA</code> e excluídas das estatísticas).
+</p>
+
+<h3>4.4 Delimitação suave dos estados</h3>
+<p>
+Para dar contexto geográfico aos mapas, os limites dos 27 estados brasileiros (GeoJSON, fonte
+<i>click_that_hood</i>) são sobrepostos com <code>geopandas</code>, com a geometria simplificada
+(tolerância 0,03&deg;) para produzir um traço suave em vez do vetor de alta resolução original. Um
+utilitário <code>add_state_borders(ax)</code> desenha os contornos preservando os limites de eixo já
+definidos pelos dados climáticos (sem isso, o geopandas reenquadraria automaticamente o gráfico para o
+Brasil inteiro).
+</p>
+
+<!-- ===================== 5. VERIFICAÇÃO ===================== -->
+<div class="section-break"></div>
+<h2>5. Verificação do algoritmo</h2>
+<p>
+Antes de confiar nos resultados, o algoritmo foi verificado em duas frentes independentes: testes
+sintéticos (o código está correto?) e validação contra o artigo original (o resultado é plausível?).
+</p>
+
+<h3>5.1 Testes sintéticos</h3>
+<p>
+Foram construídos manualmente 15 perfis mensais de temperatura/precipitação, um para cada tipo climático
+relevante &#8212; <b>incluindo tipos que não ocorrem nos dados reais da região</b> (Cwc, Csa, Csb, ET, EF, BWh),
+para garantir que as regras das zonas D/E e dos subtipos raros também estivessem corretas, e não apenas as
+que "por sorte" aparecem no recorte geográfico disponível.
+</p>
+<pre>OK    esperado=Af   obtido=Af    Tcold= 27.0  Thot= 27.0  MAP= 2460mm  Pdry= 80mm
+OK    esperado=Am   obtido=Am    Tcold= 27.0  Thot= 27.0  MAP= 2525mm  Pdry= 15mm
+OK    esperado=Aw   obtido=Aw    Tcold= 26.0  Thot= 26.0  MAP= 1708mm  Pdry=  1mm
+OK    esperado=As   obtido=As    Tcold= 26.0  Thot= 26.0  MAP= 1475mm  Pdry= 20mm
+OK    esperado=BSh  obtido=BSh   Tcold= 26.0  Thot= 26.0  MAP=  510mm  Pdry=  1mm
+OK    esperado=BWh  obtido=BWh   Tcold= 28.0  Thot= 28.0  MAP=   27mm  Pdry=  0mm
+OK    esperado=Cfa  obtido=Cfa   Tcold= 13.0  Thot= 24.0  MAP= 1540mm  Pdry=110mm
+OK    esperado=Cfb  obtido=Cfb   Tcold= 13.0  Thot= 20.5  MAP= 1460mm  Pdry= 80mm
+OK    esperado=Cwa  obtido=Cwa   Tcold= 17.5  Thot= 23.5  MAP= 1415mm  Pdry= 15mm
+OK    esperado=Cwb  obtido=Cwb   Tcold= 15.5  Thot= 21.5  MAP= 1424mm  Pdry= 10mm
+OK    esperado=Cwc  obtido=Cwc   Tcold=  4.5  Thot= 11.5  MAP= 1260mm  Pdry= 15mm
+OK    esperado=Csa  obtido=Csa   Tcold= 17.5  Thot= 22.7  MAP=  810mm  Pdry= 20mm
+OK    esperado=Csb  obtido=Csb   Tcold= 17.0  Thot= 21.5  MAP=  810mm  Pdry= 20mm
+OK    esperado=ET   obtido=ET    Tcold= -3.0  Thot=  5.0  MAP=  600mm  Pdry= 50mm
+OK    esperado=EF   obtido=EF    Tcold= -5.0  Thot= -5.0  MAP=  360mm  Pdry= 30mm
+
+15/15 casos corretos</pre>
+<div class="callout ok">
+  <p>Resultado: <b>15/15 casos corretos.</b> O algoritmo implementa fielmente as regras da Tabela&nbsp;1
+  do artigo em toda a árvore de decisão, não apenas nos ramos exercitados pelos dados desta região.</p>
+</div>
+
+<h3>5.2 Validação contra o artigo original</h3>
+<p>
+O algoritmo estar correto não garante que o <b>resultado</b> bata com o artigo &#8212; os dados de entrada
+são outros (ERA5 1995&#8211;2025 vs. 2.950 estações 1950&#8211;1990). A tabela abaixo compara, ponto a ponto,
+as localidades típicas da Figura&nbsp;8 do artigo que caem dentro da <i>bounding box</i> baixada:
+</p>
+<table>
+  <tr>
+    <th>Local</th><th>Köppen&nbsp;artigo</th><th>Köppen&nbsp;ERA5</th><th>Bate?</th>
+    <th class="num">P&nbsp;artigo (mm)</th><th class="num">P&nbsp;ERA5 (mm)</th>
+    <th class="num">Viés&nbsp;P</th><th class="num">T&nbsp;ERA5 (&deg;C)</th>
+  </tr>
+  <tr><td>Ribeirão Preto (SP)</td><td>Cwa</td><td>Aw</td><td class="bad">NÃO</td>
+      <td class="num">1400</td><td class="num">1233</td><td class="num">&#8722;12%</td><td class="num">22,7</td></tr>
+  <tr><td>Belo Horizonte (MG)</td><td>Cwb</td><td>Cwa</td><td class="bad">NÃO</td>
+      <td class="num">1500</td><td class="num">924</td><td class="num">&#8722;38%</td><td class="num">20,8</td></tr>
+  <tr><td>Pico da Bandeira</td><td>Cwc</td><td>Cwb</td><td class="bad">NÃO</td>
+      <td class="num">1300</td><td class="num">1254</td><td class="num">&#8722;4%</td><td class="num">17,4</td></tr>
+  <tr><td>Curitiba (PR)</td><td>Cfb</td><td>Cfb</td><td class="ok">sim</td>
+      <td class="num">1550</td><td class="num">1513</td><td class="num">&#8722;2%</td><td class="num">17,2</td></tr>
+  <tr><td>Brasília (DF)</td><td>Aw</td><td>Aw</td><td class="ok">sim</td>
+      <td class="num">1500</td><td class="num">1262</td><td class="num">&#8722;16%</td><td class="num">21,9</td></tr>
+</table>
+<p><b>Interpretação de cada divergência:</b></p>
+<ul>
+  <li><b>Pico da Bandeira (Cwc&nbsp;&rarr;&nbsp;Cwb):</b> o ERA5 estima 17,4&nbsp;°C onde a temperatura real
+  é 9,4&nbsp;°C. A grade de ~11&nbsp;km simplesmente não resolve um pico de 2.890&nbsp;m de altitude. Todo o
+  clima Cwc do artigo (apenas 3 sítios no Brasil, todos em picos isolados) é, por construção, invisível
+  nessa resolução.</li>
+  <li><b>Ribeirão Preto e Belo Horizonte:</b> mudanças de uma única letra atravessando uma fronteira de
+  temperatura (T<sub>fria</sub>&nbsp;=&nbsp;18&nbsp;°C separa A de C; T<sub>quente</sub>&nbsp;=&nbsp;22&nbsp;°C
+  separa "a" de "b"). Há 1.377 células (quase 10% da área válida) com T<sub>fria</sub> entre 17,5 e
+  18,5&nbsp;°C &#8212; ou seja, a meio grau de trocar de zona climática inteira.</li>
+  <li><b>Viés seco sistemático:</b> nas 5 localidades de referência o ERA5 subestima a precipitação anual
+  entre 2% e 38% (mediana &#8776; -12%). Esse viés é a explicação mais provável para o clima semiárido (BSh)
+  aparecer no norte de Minas Gerais no mapa produzido aqui &#8212; ver Seção&nbsp;7.</li>
+</ul>
+
+<!-- ===================== 6. RESULTADOS ===================== -->
+<div class="section-break"></div>
+<h2>6. Resultados</h2>
+
+<h3>6.1 Análise exploratória</h3>
+<p>
+Antes da classificação, a série temporal mensal (médias espaciais sobre toda a região) foi inspecionada
+para checar ruído e tendência, seguida de uma regressão linear simples sobre a média anual:
+</p>
+<figure>
+  <img src="fig_01_cell6.png">
+  <figcaption><b>Figura 1.</b> Temperatura e precipitação médias mensais da região (média espacial sobre
+  todos os pontos de grade), jan/1995 &#8211; dez/2025. Permite identificar sazonalidade e possíveis
+  descontinuidades na série.</figcaption>
+</figure>
+<figure>
+  <img src="fig_02_cell7.png">
+  <figcaption><b>Figura 2.</b> Média anual de temperatura (com tendência linear ajustada) e precipitação
+  anual total, ano a ano. A tendência de aquecimento estimada é usada na discussão da Seção&nbsp;6.4 sobre
+  sensibilidade temporal da classificação.</figcaption>
+</figure>
+
+<h3>6.2 Climatologia espacial (1995&#8211;2025)</h3>
+<p>
+Mapas de temperatura média anual e precipitação total anual, calculados a partir da climatologia mensal
+(Seção&nbsp;4.2), com os limites estaduais sobrepostos:
+</p>
+<figure>
+  <img src="fig_03_cell9.png">
+  <figcaption><b>Figura 3.</b> Temperatura média anual (esquerda) e precipitação total anual (direita),
+  climatologia 1995&#8211;2025. O gradiente latitudinal de temperatura e o núcleo mais úmido ao redor de
+  20&#8211;22&deg;S de longitude ficam evidentes; essas duas superfícies (mais as 12 fatias mensais de cada
+  uma) são a entrada direta do algoritmo de Köppen.</figcaption>
+</figure>
+
+<h3>6.3 Mapa de classificação de Köppen</h3>
+<figure>
+  <img src="fig_04_cell15.png">
+  <figcaption><b>Figura 4.</b> Classificação climática de Köppen&#8211;Geiger obtida a partir da climatologia
+  ERA5 1995&#8211;2025, paleta no padrão sugerido por Peel et al. (2007) (mesmo padrão de cores usado no mapa
+  original do artigo). Células cinza-claro (<code>NA</code>) são pontos oceânicos dentro da <i>bounding
+  box</i> (litoral de BA/ES/RJ), sem classificação por definição.</figcaption>
+</figure>
+<p>Distribuição percentual dos tipos climáticos nas 13.966 células de terra válidas (85,4% do total):</p>
+<table>
+  <tr><th>Clima</th><th class="num">Nº de células</th><th class="num">%</th></tr>
+  <tr><td>Aw</td><td class="num">9.639</td><td class="num">69,0%</td></tr>
+  <tr><td>Cfa</td><td class="num">1.373</td><td class="num">9,8%</td></tr>
+  <tr><td>Cwa</td><td class="num">825</td><td class="num">5,9%</td></tr>
+  <tr><td>BSh</td><td class="num">789</td><td class="num">5,6%</td></tr>
+  <tr><td>Cfb</td><td class="num">602</td><td class="num">4,3%</td></tr>
+  <tr><td>Cwb</td><td class="num">465</td><td class="num">3,3%</td></tr>
+  <tr><td>Am</td><td class="num">155</td><td class="num">1,1%</td></tr>
+  <tr><td>Af</td><td class="num">118</td><td class="num">0,8%</td></tr>
+</table>
+<p>
+A predominância de Aw (Cerrado do Centro-Oeste), seguida por Cfa/Cfb (Sul de SP e PR) e Cwa/Cwb (planaltos
+de MG/SP), é consistente com a geografia climática esperada para essa região específica do país.
+</p>
+
+<h3>6.4 Sensibilidade temporal: 1995&#8211;2010 vs. 2011&#8211;2025</h3>
+<p>
+Uma vantagem de dispor de 31 anos de ERA5 é poder checar se a classificação está migrando ao longo do
+tempo &#8212; algo que o artigo original, limitado a uma única normal 1950&#8211;1990, não conseguia investigar.
+A climatologia foi recalculada separadamente para os dois sub-períodos e comparada célula a célula:
+</p>
+<figure>
+  <img src="fig_05_cell20.png">
+  <figcaption><b>Figura 5.</b> Células cuja classificação de Köppen mudou entre a climatologia
+  1995&#8211;2010 e a climatologia 2011&#8211;2025. Em vermelho, 2.261 de 13.966 células (16,2%) trocaram de
+  tipo climático.</figcaption>
+</figure>
+<p>As dez transições mais frequentes:</p>
+<table>
+  <tr><th>Transição</th><th class="num">Nº de células</th></tr>
+  <tr><td>Aw &rarr; BSh</td><td class="num">858</td></tr>
+  <tr><td>Cwa &rarr; Aw</td><td class="num">332</td></tr>
+  <tr><td>Am &rarr; Aw</td><td class="num">297</td></tr>
+  <tr><td>Cfb &rarr; Cfa</td><td class="num">176</td></tr>
+  <tr><td>Cfa &rarr; Aw</td><td class="num">165</td></tr>
+  <tr><td>Cwb &rarr; Cwa</td><td class="num">149</td></tr>
+  <tr><td>Af &rarr; Am</td><td class="num">72</td></tr>
+  <tr><td>Cwa &rarr; Cfa</td><td class="num">47</td></tr>
+  <tr><td>Af &rarr; Aw</td><td class="num">45</td></tr>
+  <tr><td>Cfa &rarr; Am</td><td class="num">24</td></tr>
+</table>
+<p>
+A transição dominante, <code>Aw&nbsp;&rarr;&nbsp;BSh</code> (858 células), foi decomposta para separar o
+efeito de queda de precipitação do efeito de aquecimento (que eleva o limiar P<sub>threshold</sub> da zona
+árida, empurrando células para B mesmo sem mudança de chuva):
+</p>
+<pre>Células Aw -> BSh: 858
+
+  precipitação anual :   856.6 ->   695.2 mm  (-161.4 mm)
+  temperatura média  :   23.50 ->   24.09 °C  (+0.60 °C)
+  limiar 10·Pthresh  :   750.0 ->   761.9 mm  (+11.9 mm)
+
+  Contribuição para a mudança de classe:
+    queda de precipitação           :  161.4 mm  (93%)
+    elevação do limiar (aquecimento):   11.9 mm  ( 7%)
+
+  Atenção: 387 das 858 células (45%) estão a menos de 50 mm da fronteira,
+  ou seja, a reclassificação é marginal e poderia reverter com poucos anos diferentes.</pre>
+<div class="callout warn">
+  <p><b>Interpretação recomendada:</b> 93% do efeito vem de queda real de precipitação, não de
+  aquecimento; mas quase metade das células reclassificadas está muito próxima da fronteira de decisão, e a
+  janela 2011&#8211;2025 inclui a seca severa de 2012&#8211;2017 no vale do São Francisco. O resultado deve ser
+  lido como <b>"episódio de seca capturado pela classificação"</b>, não como evidência de mudança climática
+  consolidada &#8212; distinção que exigiria uma série mais longa e testes de significância estatística.</p>
+</div>
+
+<!-- ===================== 7. LIMITAÇÕES ===================== -->
+<div class="section-break"></div>
+<h2>7. Limitações e ressalvas metodológicas</h2>
+<p>O algoritmo passa em 15/15 testes sintéticos (Seção&nbsp;5.1), portanto as divergências abaixo vêm dos
+<b>dados de entrada</b>, não das regras de classificação.</p>
+
+<h4>Limitações dos dados</h4>
+<ul>
+  <li><b>Área parcial:</b> a bbox baixada cobre só GO/DF/MS/MG/SP/parte do PR/TO/BA &#8212; não o Brasil
+  inteiro do artigo. Para o mapa completo, é preciso refazer o request do CDS com
+  <code>area=[6, -74, -34, -34]</code> (arquivo <code>cds_request.py</code>).</li>
+  <li><b>Resolução espacial:</b> ERA5 tem grade nativa de ~31&nbsp;km (aqui reamostrada a 0,1&deg;/~11&nbsp;km
+  pelo CDS); o artigo chega a 1&nbsp;ha via krigagem de 2.950 estações + modelo de temperatura por altitude.
+  Relevo local (efeito orográfico, vales, picos) que o artigo capta bem é invisível no ERA5 nessa
+  resolução &#8212; o caso mais claro é o clima Cwc do Pico da Bandeira, perdido por completo.</li>
+  <li><b>Sem correção por altitude:</b> o artigo ajusta temperatura por altitude via SRTM; aqui usa-se a
+  temperatura de superfície do ERA5 diretamente, que já embute algum efeito orográfico do modelo, mas não
+  com a mesma precisão local.</li>
+  <li><b>Reanálise vs. observação:</b> ERA5 é um produto de assimilação de modelo + observações, não uma
+  medição direta como as 2.950 estações do artigo &#8212; um viés sistemático é esperado, especialmente em
+  precipitação convectiva (o regime dominante nesta região).</li>
+  <li><b>Oceano dentro da bbox:</b> pontos próximos ao litoral (BA/ES/RJ) caem no Atlântico e ficam com
+  <code>NA</code> &#8212; comportamento esperado, não falha de classificação.</li>
+</ul>
+
+<h4>Divergências específicas em relação ao artigo (e por quê)</h4>
+<ul>
+  <li><b>BSh no norte de Minas Gerais:</b> o artigo afirma explicitamente que <i>não há</i> clima semiárido
+  em MG (o ponto mais ao sul seria Piripá/BA, ~15&deg;S). Este mapa coloca BSh até ~19&deg;S, no vale do São
+  Francisco. Vale notar que <b>Sparovek et al. (2007) e Sá Junior et al. (2012) também encontraram BSh no
+  norte de MG</b> &#8212; ou seja, o resultado aqui concorda com esses dois estudos e diverge apenas de
+  Alvares et al. Parte do efeito é viés seco do ERA5; parte pode ser secamento real desde a linha de base
+  1950&#8211;1990.</li>
+  <li><b><code>As</code> não aparece</b> (0 células) nesta bbox, embora o artigo mapeie As no norte de MG.
+  O As do artigo concentra-se no Nordeste (fora da bbox); na porção mineira, a diferença cai novamente na
+  sensibilidade de fronteira discutida acima.</li>
+</ul>
+
+<div class="callout">
+  <p><b>Recomendação para trabalho futuro:</b> (1) reprocessar com a bbox do Brasil inteiro; (2) validar o
+  viés de precipitação do ERA5 contra uma rede de estações (ex.: INMET) antes de tirar conclusões sobre
+  mudança de tipo climático; (3) se a resolução de picos isolados (Cwc) for relevante, considerar ERA5-Land
+  (grade ~9&nbsp;km) ou um downscaling estatístico com DEM, replicando a abordagem do artigo original.</p>
+</div>
+
+<!-- ===================== 8. REFERÊNCIAS ===================== -->
+<h2>8. Referências</h2>
+<ul style="list-style:none; padding-left:0; font-size: 9.3pt;">
+  <li style="margin-bottom:8pt;">ALVARES, C.A.; STAPE, J.L.; SENTELHAS, P.C.; GONÇALVES, J.L.M.; SPAROVEK, G.
+  <b>Köppen's climate classification map for Brazil.</b> Meteorologische Zeitschrift, v.&nbsp;22, n.&nbsp;6,
+  p.&nbsp;711&#8211;728, 2013.</li>
+  <li style="margin-bottom:8pt;">KOTTEK, M.; GRIESER, J.; BECK, C.; RUDOLF, B.; RUBEL, F. <b>World Map of
+  the Köppen-Geiger climate classification updated.</b> Meteorologische Zeitschrift, v.&nbsp;15,
+  p.&nbsp;259&#8211;263, 2006.</li>
+  <li style="margin-bottom:8pt;">PEEL, M.C.; FINLAYSON, B.L.; MCMAHON, T.A. <b>Updated world map of the
+  Köppen-Geiger climate classification.</b> Hydrology and Earth System Sciences, v.&nbsp;11,
+  p.&nbsp;1633&#8211;1644, 2007.</li>
+  <li style="margin-bottom:8pt;">SPAROVEK, G.; VAN LIER, Q.J.; DOURADO NETO, D. <b>Computer assisted Koeppen
+  climate classification: a case study for Brazil.</b> International Journal of Climatology, v.&nbsp;27,
+  p.&nbsp;257&#8211;266, 2007.</li>
+  <li style="margin-bottom:8pt;">SÁ JÚNIOR, A.; CARVALHO, L.G.; SILVA, F.F.; ALVES, M.C. <b>Application of
+  the Köppen classification for climatic zoning in the state of Minas Gerais, Brazil.</b> Theoretical and
+  Applied Climatology, v.&nbsp;108, p.&nbsp;1&#8211;7, 2012.</li>
+  <li style="margin-bottom:8pt;">KÖPPEN, W. <b>Das geographische System der Klimate.</b> In: KÖPPEN, W.;
+  GEIGER, R. (Eds.). Handbuch der Klimatologie. Berlin: Gebrüder Borntraeger, 1936. v.&nbsp;1, parte C.</li>
+  <li style="margin-bottom:8pt;">Copernicus Climate Change Service (C3S). <b>ERA5 monthly averaged data on
+  single levels from 1940 to present.</b> Copernicus Climate Data Store (CDS), 2023.</li>
+</ul>
+
+</body>
+</html>

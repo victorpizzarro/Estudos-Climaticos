@@ -3,9 +3,12 @@
 
 Repositório dedicado a estudos de análise climática, validação de reanálises e comparação com observações meteorológicas no Brasil.
 
-Atualmente, o projeto principal é a avaliação da temperatura máxima horária do **ERA5** em relação às estações meteorológicas automáticas do **INMET**, incluindo controle de qualidade, pareamento espaço-temporal, métricas de desempenho, extremos anuais e tendências climáticas.
+Atualmente, o repositório reúne dois projetos:
 
-## Projeto principal
+- **[`avaliacao_era5_inmet`](avaliacao_era5_inmet/)** — avaliação da temperatura máxima horária do ERA5 em relação às estações automáticas do INMET, com controle de qualidade, pareamento espaço-temporal, métricas de desempenho, extremos anuais e tendências climáticas.
+- **[`classificacao_koppen_era5`](classificacao_koppen_era5/)** — reprodução exploratória, com dados modernos do ERA5, do mapa de classificação climática de Köppen apresentado em Alvares et al. (2013) para o Brasil.
+
+## Projeto: avaliação ERA5 × INMET
 
 ### `avaliacao_era5_inmet`
 
@@ -192,6 +195,18 @@ Próximas extensões possíveis incluem:
 - expansão para outros produtos de reanálise;
 - comparação com outras redes observacionais;
 - homogeneização climatológica mais aprofundada das séries de estação.
+
+---
+
+## Projeto: classificação de Köppen a partir do ERA5
+
+### `classificacao_koppen_era5`
+
+Reprodução exploratória, com dados do ERA5 (1995–2025, grade 0.1°), do mapa de classificação climática de Köppen apresentado em Alvares et al. (2013) para o Brasil, usando as regras de Kottek et al. (2006) / Peel et al. (2007).
+
+Cobre um recorte parcial do território (aproximadamente GO/DF/MS/MG/SP/parte do PR e TO/BA), inclui verificação do algoritmo de classificação com perfis sintéticos, validação ponto a ponto contra o artigo original, análise de sensibilidade temporal (1995–2010 vs. 2011–2025) e climogramas para SP, RJ, ES e MG.
+
+Detalhes de conteúdo, pipeline e ressalvas metodológicas em [`classificacao_koppen_era5/README.md`](classificacao_koppen_era5/README.md).
 
 ---
 
